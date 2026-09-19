@@ -1,4 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "headers": [
     {
@@ -32,7 +33,7 @@
       ]
     },
     {
-      "source": "/(.*)\.(mp4|png|jpg|jpeg|svg|webp)",
+      "source": "/(.*).(mp4|png|jpg|jpeg|svg|webp)",
       "headers": [
         {
           "key": "Cache-Control",
