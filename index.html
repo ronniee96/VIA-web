@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidarbha Industrial Associates | Heavy Industrial Hydro-Jetting (0–1100 BAR) & Chemical Cleaning</title>
+    <meta name="description" content="Vidarbha Industrial Associates (Est. 1997, Chandrapur, Maharashtra) - Premier 0-1100 BAR ultra-high pressure hydro-jetting, chemical descaling, boiler turnaround, condenser tube cleaning, and NDT services across India.">
+    <meta name="keywords" content="Vidarbha Industrial Associates, Hydro Jetting 1100 BAR, Condenser Cleaning, Boiler Descaling, Chemical Cleaning, Acid Pickling, Chandrapur Maharashtra, Industrial Cleaning India, P.C. Mitra">
+    <meta name="theme-color" content="#070b14">
+
+        <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="apple-touch-icon" href="Logo.png">
+    <link rel="canonical" href="https://via-industrial.com/">
+    <meta property="og:url" content="https://via-industrial.com/">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Vidarbha Industrial Associates | Heavy Industrial Hydro-Jetting (0–1100 BAR)">
+    <meta property="og:description" content="Engineered for the Pressure. Trusted for the Job. Serving India's Power, Steel, Cement, and Chemical industries since 1997.">
+    <meta property="og:image" content="assets/hero_plant.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slatebg: {
+                            DEFAULT: '#070b14',
+                            deep: '#04070d',
+                            surface: '#0d1527',
+                            card: '#111c33',
+                            border: 'rgba(255, 255, 255, 0.1)',
+                            cardhover: '#162442'
+                        },
+                        amberbrand: {
+                            DEFAULT: '#f59e0b',
+                            light: '#fbbf24',
+                            glow: 'rgba(245, 158, 11, 0.35)',
+                            hover: '#d97706'
+                        },
+                        cyanjet: {
+                            DEFAULT: '#00f0ff',
+                            light: '#38bdf8',
+                            glow: 'rgba(0, 240, 255, 0.4)',
+                            dark: '#0284c7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-deep: #070b14;
+            --bg-surface: #0d1527;
+            --bg-card: #111c33;
+            --amber-accent: #f59e0b;
+            --cyan-accent: #00f0ff;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Ambient Glow & Grid */
+        .industrial-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-panel {
+            background: rgba(17, 28, 51, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .glass-panel-hover:hover {
+            border-color: rgba(0, 240, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.12);
+            transform: translateY(-3px);
+        }
+
+        /* Chips & Badges */
+        .tech-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 240, 255, 0.12);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            border-radius: 9999px;
+            padding: 6px 18px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #00f0ff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .gold-chip {
+            background: rgba(245, 158, 11, 0.14);
+            border-color: rgba(245, 158, 11, 0.5);
+            color: #fbbf24;
+        }
+
+        /* Partner Marquee Animation */
+        .marquee-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            background: #ffffff;
+            padding: 2.25rem 0;
+            border-top: 2px solid #e2e8f0;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .marquee-track {
+            display: inline-flex;
+            align-items: center;
+            animation: marquee 175s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 1.5rem;
+            flex-shrink: 0;
+        }
+        .brand-logo-img {
+            height: 48px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+            filter: grayscale(100%) contrast(120%);
+            transition: all 0.3s ease;
+        }
+        .marquee-item:hover .brand-logo-img {
+            filter: grayscale(0%) contrast(100%);
+            transform: scale(1.1);
+        }
+        .brand-pill {
+            height: 44px;
+            padding: 0 20px;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.88rem;
+            color: #334155;
+            background: #f8fafc;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .marquee-item:hover .brand-pill {
+            border-color: #f59e0b;
+            color: #070b14;
+            background: #ffffff;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+            transform: scale(1.05);
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Interactive Canvas */
+        #cleanCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: crosshair;
+            touch-action: none;
+        }
+
+        /* 3D Flip Cards for Capabilities */
+        .flip-card {
+            background-color: transparent;
+            height: 400px;
+            perspective: 1200px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner,
+        .flip-card.is-flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .flip-card-front {
+            background: #0d1527;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .flip-card-back {
+            background: #111c33;
+            border: 1px solid rgba(0, 240, 255, 0.35);
+            transform: rotateY(180deg);
+            text-align: left;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 9px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070b14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+    </style>
+</head>
+<body class="bg-slatebg-deep text-slate-100 antialiased selection:bg-amberbrand selection:text-slatebg-deep">
+
+            <!-- Top Statutory & Emergency Bar: Single Mathematically Level Row -->
+    <header class="bg-slatebg-surface border-b border-white/10 text-[11px] md:text-xs h-10 px-4 md:px-10 z-50 relative text-slate-300 font-mono flex items-center">
+        <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4 overflow-hidden">
+            <!-- Left Info (Single Horizontal Row) -->
+            <div class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0">
+                <span class="inline-flex items-center gap-1.5 text-amberbrand font-bold whitespace-nowrap">
+                    <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    EST. 1997 • 28+ YEARS
+                </span>
+                <span class="text-slate-600">|</span>
+                <span class="text-slate-300 whitespace-nowrap">
+                    <i class="fas fa-map-marker-alt text-amberbrand mr-1"></i> Chandrapur, MH
+                </span>
+                <span class="text-slate-600 hidden sm:inline">|</span>
+                <span class="text-slate-300 hidden sm:inline whitespace-nowrap">
+                    <i class="fas fa-certificate text-cyanjet mr-1"></i> ISO 9001 &amp; 45001
+                </span>
+            </div>
+
+            <!-- Right Info (Single Horizontal Row) -->
+            <div class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0 ml-auto">
+                <a href="tel:+919422837904" class="text-white hover:text-cyanjet transition font-bold flex items-center gap-1.5 bg-cyanjet/10 hover:bg-cyanjet/20 px-2.5 py-1 rounded-md border border-cyanjet/30 whitespace-nowrap text-[11px]">
+                    <i class="fas fa-phone-alt text-amberbrand text-[10px]"></i> 24/7: +91 9422837904
+                </a>
+                <span class="text-slate-600 hidden md:inline">|</span>
+                <span class="text-slate-400 hidden md:inline whitespace-nowrap text-[11px]">
+                    GSTIN: <strong class="text-slate-200">27AHTPM2150M1ZU</strong>
+                </span>
+                <span class="text-slate-600 hidden xl:inline">|</span>
+                <span class="text-slate-400 hidden xl:inline whitespace-nowrap text-[11px]">
+                    MSME: <strong class="text-slate-200">MH-08-0024043</strong>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav id="navbar" class="sticky top-0 w-full z-40 bg-slatebg-deep/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 py-3 px-4 md:px-10 flex justify-between items-center">
+        <!-- Single Official VIA Emblem Logo (High Contrast Container, Never Camouflaged) -->
+        <a href="#top" class="flex items-center gap-3.5 group cursor-pointer" aria-label="Vidarbha Industrial Associates Home">
+            <div class="h-12 w-12 rounded-xl bg-white p-1 shadow-lg shadow-black/50 border-2 border-amberbrand/70 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <img src="assets/via_logo_badge.png" alt="Official VIA Emblem" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='Logo.png';">
+            </div>
+            <div class="flex flex-col">
+                <div class="font-heading font-black text-lg md:text-xl tracking-tight text-white flex items-center gap-1.5 leading-none">
+                    <span>VIDARBHA</span>
+                    <span class="text-amberbrand">INDUSTRIAL</span>
+                </div>
+                <span class="text-[10px] uppercase font-mono tracking-widest text-cyanjet font-bold mt-1">Associates • Est. 1997</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex gap-6 xl:gap-8 items-center text-xs font-bold uppercase tracking-wider text-slate-300">
+            <a href="#about" class="hover:text-amberbrand transition">Heritage</a>
+            <a href="#services" class="hover:text-amberbrand transition">Services</a>
+            <a href="#equipment" class="hover:text-amberbrand transition">Fleet (1100 BAR)</a>
+            <a href="#operations" class="hover:text-amberbrand transition">On-Site Operations</a>
+            <a href="#case-study" class="hover:text-amberbrand transition">Case Studies</a>
+            <a href="#compliance" class="hover:text-amberbrand transition">Compliance</a>
+            <a href="#quote" class="bg-gradient-to-r from-amberbrand to-amber-500 hover:from-amber-400 hover:to-amber-600 text-slatebg-deep px-5 py-2.5 rounded-full font-black uppercase tracking-wide text-xs hover:scale-105 transition transform shadow-[0_0_20px_rgba(245,158,11,0.35)] flex items-center gap-2">
+                <span>Request Quote</span>
+                <i class="fab fa-whatsapp text-sm text-slatebg-deep"></i>
+            </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="lg:hidden text-white hover:text-amberbrand text-2xl focus:outline-none p-2" aria-label="Toggle Navigation Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="fixed inset-0 z-50 bg-slatebg-deep/98 backdrop-blur-2xl transform -translate-x-full transition-transform duration-300 flex flex-col justify-center px-8 gap-5 lg:hidden">
+        <button id="mobileMenuClose" class="absolute top-6 right-6 text-white hover:text-amberbrand text-3xl p-2" aria-label="Close Navigation Menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="flex items-center gap-3 mb-4">
+            <div class="h-12 w-12 rounded-xl bg-white p-1 shadow-md border-2 border-amberbrand flex items-center justify-center">
+                <img src="assets/via_logo_badge.png" alt="Official VIA Emblem" class="h-full w-full object-contain" onerror="this.src='Logo.png';">
+            </div>
+            <div>
+                <span class="font-heading font-black text-xl text-white block leading-tight">VIDARBHA INDUSTRIAL</span>
+                <span class="text-xs font-mono text-cyanjet font-bold uppercase tracking-widest">Associates • Est. 1997</span>
+            </div>
+        </div>
+        <a href="#about" class="mobile-link text-lg font-bold uppercase tracking-wider text-slate-200 hover:text-amberbrand py-2 border-b border-white/5">Heritage & Leadership</a>
+        <a href="#services" class="mobile-link text-lg font-bold uppercase tracking-wider text-slate-200 hover:text-amberbrand py-2 border-b border-white/5">Specialized Services</a>
+        <a href="#equipment" class="mobile-link text-lg font-bold uppercase tracking-wider text-slate-200 hover:text-amberbrand py-2 border-b border-white/5">Fleet (1100 BAR Triplex)</a>
+        <a href="#operations" class="mobile-link text-lg font-bold uppercase tracking-wider text-slate-200 hover:text-amberbrand py-2 border-b border-white/5">Operations Gallery</a>
+        <a href="#case-study" class="mobile-link text-lg font-bold uppercase tracking-wider text-slate-200 hover:text-amberbrand py-2 border-b border-white/5">Case Studies & Two-Step</a>
+        <a href="#compliance" class="mobile-link text-lg font-bold uppercase tracking-wider text-slate-200 hover:text-amberbrand py-2 border-b border-white/5">Safety & Certifications</a>
+        <a href="#quote" class="mobile-link mt-3 bg-amberbrand text-slatebg-deep text-center py-3.5 rounded-full font-black uppercase tracking-wide flex items-center justify-center gap-2 shadow-lg">
+            <span>Request Instant Quote</span> <i class="fab fa-whatsapp text-lg"></i>
+        </a>
+        <a href="tel:+919422837904" class="mobile-link text-center py-2.5 rounded-full border border-cyanjet text-cyanjet font-bold text-sm flex items-center justify-center gap-2">
+            <i class="fas fa-phone-alt"></i> Call +91 9422837904
+        </a>
+    </div>
+
+    <!-- HERO SECTION: Perfectly Aligned Headline, High Contrast Visuals & Interactive Cleaning Simulator -->
+    <section id="top" class="relative overflow-hidden pt-10 pb-20 md:py-24 border-b border-white/10 industrial-grid">
+        <!-- Background Ambient Video & 4K AI Fallback -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 filter brightness-90" style="background-image: url('assets/hero_plant.jpg');"></div>
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-35 filter brightness-90" onerror="this.style.display='none'">
+                <source src="Restore_Peak_Performance_Now_version_1.mp4" type="video/mp4">
+            </video>
+            <!-- Radial Lighting Overlays: Deep Slate with Cyan and Amber Highlights -->
+            <div class="absolute inset-0 bg-gradient-to-r from-slatebg-deep via-slatebg-deep/90 to-slatebg-deep/75"></div>
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyanjet/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-amberbrand/10 rounded-full blur-3xl pointer-events-none"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Master Typography & Quick Actions -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2.5 bg-slatebg-surface/90 border border-amberbrand/40 px-4 py-2 rounded-full shadow-lg">
+                        <span class="flex h-2.5 w-2.5 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amberbrand opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amberbrand"></span>
+                        </span>
+                        <span class="text-xs font-mono font-bold tracking-wider text-amber-300 uppercase">
+                            SINCE 1997 • CHANDRAPUR, MAHARASHTRA • 0–1100 BAR
+                        </span>
+                    </div>
+
+                    <!-- Main Title: Flawlessly Aligned, Big, High-Contrast -->
+                                        <!-- Main Title: Perfectly Structured 2-Line Heading -->
+                    <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-[1.15]">
+                        <span class="block">Engineered for the <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanjet via-sky-300 to-blue-400 drop-shadow-[0_0_20px_rgba(0,240,255,0.4)]">Pressure.</span></span>
+                        <span class="block mt-1 sm:mt-2">Trusted for the <span class="text-transparent bg-clip-text bg-gradient-to-r from-amberbrand via-yellow-300 to-amber-500 drop-shadow-[0_0_20px_rgba(245,158,11,0.4)]">Job.</span></span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-base sm:text-lg lg:text-xl text-slate-200 font-normal leading-relaxed max-w-2xl">
+                        India’s heavy-duty hydro-jetting and chemical cleaning enterprise. Delivering <strong class="text-white font-bold">0–1100 BAR</strong> ultra-high pressure scale purging, boiler turnarounds, and surface condenser restoration across India's largest thermal, steel, cement, and chemical facilities.
+                    </p>
+
+                    <!-- CTAs Bar: Instant Visibility Above the Fold -->
+                    <div class="pt-2 flex flex-wrap gap-4 items-center">
+                        <a href="#quote" class="bg-gradient-to-r from-amberbrand via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-slatebg-deep px-8 py-4 rounded-full font-black text-sm sm:text-base transition transform hover:scale-105 shadow-[0_0_25px_rgba(245,158,11,0.4)] flex items-center gap-2.5">
+                            <i class="fab fa-whatsapp text-xl text-slatebg-deep"></i>
+                            <span>Request Instant Technical Quote</span>
+                        </a>
+                        <a href="tel:+919422837904" class="glass-panel hover:border-cyanjet text-white hover:text-cyanjet px-6 py-4 rounded-full font-bold text-sm sm:text-base transition flex items-center gap-2 shadow-lg">
+                            <i class="fas fa-phone-alt text-cyanjet"></i>
+                            <span>24/7 Dispatch: +91 9422837904</span>
+                        </a>
+                        <a href="#equipment" class="text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white transition flex items-center gap-1.5 ml-2">
+                            <span>View 1100 BAR Fleet</span>
+                            <i class="fas fa-arrow-right text-amberbrand text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Points Grid -->
+                    <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-slate-300 font-medium">
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-lg">
+                            <i class="fas fa-check-circle text-amberbrand text-sm"></i>
+                            <span>15 Machine Units</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-lg">
+                            <i class="fas fa-shield-alt text-cyanjet text-sm"></i>
+                            <span>ISO 9001 & 45001</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-2 rounded-lg col-span-2 sm:col-span-1">
+                            <i class="fas fa-clock text-emerald-400 text-sm"></i>
+                            <span>100% On-Time Completion</span>
+                        </div>
+                    </div>
+                </div>
+
+                                                <!-- Right Column: Interactive 1100 BAR Plain Descaling Simulator -->
+                <div class="lg:col-span-5">
+                    <div class="glass-panel rounded-3xl p-5 md:p-6 border-2 border-cyanjet/30 shadow-[0_0_35px_rgba(0,240,255,0.15)] relative overflow-hidden">
+                        <!-- HUD Header -->
+                        <div class="flex justify-between items-center pb-3.5 border-b border-white/10 mb-4 relative z-10">
+                            <div>
+                                <span class="text-[10px] font-mono text-cyanjet font-bold tracking-widest uppercase block">1100 BAR HYDRO-JET SIMULATOR</span>
+                                <h3 class="font-heading font-black text-white text-base md:text-lg flex items-center gap-2">
+                                    <i class="fas fa-crosshairs text-cyanjet"></i> Tube Scale Cleanser
+                                </h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold bg-cyanjet/10 text-cyanjet border border-cyanjet/30 px-2.5 py-1 rounded-full">
+                                    <span class="h-2 w-2 rounded-full bg-cyanjet animate-ping"></span> 16,000 PSI ACTIVE
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Blast Surface Canvas Container: Reveals Pristine 4K Condenser Cleaning Image -->
+                        <div class="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-white/20 bg-slate-900 shadow-2xl group">
+                            <!-- Background Clean 4K Industrial Condenser Cleaning Image (Worker & Tube Sheet) -->
+                            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/condenser_cleaning.jpg');"></div>
+                            
+                            <!-- Plain Rust & Boiler Scale Overlay Canvas (No Distracting Water Dots) -->
+                            <canvas id="cleanCanvas" class="relative z-10"></canvas>
+
+                            <!-- Minimal Subtle Hint at Bottom -->
+                            <div class="absolute bottom-2.5 left-3 z-20 pointer-events-none bg-slatebg-deep/85 border border-white/15 px-3 py-1 rounded-lg text-xs font-mono text-slate-300 flex items-center gap-2 shadow-lg">
+                                <i class="fas fa-hand-pointer text-amberbrand"></i>
+                                <span>Move cursor to clean rust &amp; reveal equipment</span>
+                            </div>
+                        </div>
+
+                        <!-- HUD Metrics Bar -->
+                        <div class="mt-4 pt-3 flex flex-wrap items-center justify-between gap-3 text-xs font-mono relative z-10">
+                            <div>
+                                <span class="text-slate-400 block text-[10px]">TUBE SCALE REMOVAL:</span>
+                                <span id="cleanPercentText" class="text-lg font-black text-amberbrand">0%</span>
+                                <span class="text-slate-400 text-[11px]"> / 100% Target</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block text-[10px]">WATER FLOW:</span>
+                                <span class="text-cyanjet font-bold text-sm">60 LPM @ 1100 BAR</span>
+                            </div>
+                            <button onclick="resetRustCanvas()" class="bg-white/10 hover:bg-amberbrand hover:text-slatebg-deep text-slate-200 border border-white/20 px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition">
+                                <i class="fas fa-redo-alt mr-1"></i> Reset Scale
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY STATS & RAPID MOBILIZATION STRIP (Bright, High Contrast) -->
+    <section class="py-12 bg-slatebg-surface border-b border-white/10 relative z-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-2xl bg-slatebg-card border border-white/10">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyanjet to-sky-300 font-heading">
+                        1,100 <span class="text-xl sm:text-2xl text-cyanjet">BAR</span>
+                    </div>
+                    <div class="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">Ultra-High Jetting Peak</div>
+                    <p class="text-[11px] text-slate-400 mt-1 font-mono">Triplex Plunger Technology</p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slatebg-card border border-white/10">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amberbrand to-yellow-300 font-heading">
+                        28+ <span class="text-xl sm:text-2xl text-amberbrand">Years</span>
+                    </div>
+                    <div class="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">Continuous Execution</div>
+                    <p class="text-[11px] text-slate-400 mt-1 font-mono">Serving Since 1997</p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slatebg-card border border-white/10">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-black text-white font-heading">
+                        15 <span class="text-xl sm:text-2xl text-cyanjet">Units</span>
+                    </div>
+                    <div class="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">Specialized Machine Fleet</div>
+                    <p class="text-[11px] text-slate-400 mt-1 font-mono">Trailers, Trolleys & Skids</p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slatebg-card border border-white/10">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 font-heading">
+                        100%
+                    </div>
+                    <div class="text-xs uppercase tracking-wider text-slate-300 font-bold mt-1">Turnaround Safety Record</div>
+                    <p class="text-[11px] text-slate-400 mt-1 font-mono">Zero Lost-Time Injuries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION & HERITAGE -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6 relative z-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Info -->
+            <div class="lg:col-span-7 space-y-6">
+                <span class="tech-chip gold-chip">Engineering Heritage • Chandrapur Hub</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
+                    28 Years of Heavy Industrial Cleaning Mastery
+                </h2>
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light">
+                    Headquartered in <strong class="text-white">Chandrapur, Maharashtra</strong> — the epicentre of central India’s thermal power generation, coal mining, and heavy steel production — <strong class="text-white">Vidarbha Industrial Associates (VIA)</strong> was founded in 1997 to solve the toughest fouling and heat-transfer challenges in heavy industry.
+                </p>
+                <p class="text-slate-300 text-base leading-relaxed font-light">
+                    Under the leadership of veteran director <strong class="text-amberbrand">P.C. Mitra</strong> and senior mechanical engineers, VIA operates a battle-tested fleet of 15 high-pressure units capable of generating pressures up to <strong class="text-cyanjet">1100 BAR</strong>. Our technicians are trained in ballistic suit operation, rigid and flexible lancing, automated chemical dosing, and emergency turnaround protocols.
+                </p>
+
+                <!-- Key Advantage Bullets -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-start gap-3 bg-slatebg-card p-4 rounded-xl border border-white/10">
+                        <i class="fas fa-bolt text-amberbrand text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">2-Hour Emergency Dispatch</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Rapid mobilization for unplanned outages across Maharashtra, Chhattisgarh & MP.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-slatebg-card p-4 rounded-xl border border-white/10">
+                        <i class="fas fa-shield-alt text-cyanjet text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Full Statutory Compliance</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">ESIC, EPF, Comprehensive Workman Compensation, and Factory Safety compliant.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote / Philosophy -->
+                <div class="border-l-4 border-amberbrand pl-4 py-2 bg-white/5 rounded-r-xl">
+                    <p class="italic text-slate-200 text-sm md:text-base font-serif">
+                        "Your satisfaction isn't our goal — it's our guarantee. We work until it's done right."
+                    </p>
+                    <span class="text-xs font-mono text-amber-300 uppercase tracking-widest block mt-1">
+                        — P.C. Mitra, Founder & Managing Director
+                    </span>
+                </div>
+            </div>
+
+            <!-- Right Visual: Authentic Infographic & Blueprint -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="glass-panel rounded-2xl overflow-hidden border border-white/15 p-2 shadow-2xl">
+                    <img src="assets/solutions_infographic.jpg" alt="VIA Precision Industrial Cleaning Solutions" class="w-full h-auto rounded-xl object-cover hover:scale-102 transition duration-500">
+                    <div class="p-4 text-xs font-mono text-slate-300 flex justify-between items-center">
+                        <span><i class="fas fa-award text-amberbrand mr-1"></i> VIA Technical Overview</span>
+                        <span class="text-cyanjet">ISO 9001 / ISO 45001</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIALIZED SERVICES (Enhanced Depth & 3D Cards) -->
+    <section id="services" class="py-24 bg-slatebg-surface relative z-20 border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="tech-chip">Engineered Capabilities</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white">Heavy Industrial Services</h2>
+                <p class="text-slate-400 text-base md:text-lg font-light">
+                    Precision high-pressure hydro-jetting, chemical descaling, and non-destructive testing for mission-critical industrial assets.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: 0-1100 BAR Hydro Jetting -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div>
+                                <div class="w-14 h-14 rounded-xl bg-cyanjet/10 border border-cyanjet/40 flex items-center justify-center text-cyanjet text-2xl mb-6">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-cyanjet font-bold">CORE CAPABILITY</span>
+                                <h3 class="text-xl font-bold text-white mt-1 mb-3">0–1100 BAR Hydro-Jet Cleaning</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    High-impact supersonic water jetting up to 1100 BAR (16,000 PSI) for surface condensers, boiler water walls, economizers, and air preheaters.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs font-mono text-cyanjet">
+                                <span>15 HP to 120 HP Rigs</span>
+                                <span>Flip for Specs &rarr;</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="font-bold text-white text-base mb-2 text-cyanjet">Technical Parameters</h4>
+                            <ul class="text-xs text-slate-300 space-y-2.5 font-mono">
+                                <li>• <strong>Pressure:</strong> 150 to 1100 BAR continuous</li>
+                                <li>• <strong>Flow Rates:</strong> 40 to 120 LPM (high sludge volume)</li>
+                                <li>• <strong>Lancing:</strong> Flexible nylon & rigid stainless steel</li>
+                                <li>• <strong>Nozzles:</strong> Forward-facing cutters & retro-rotating</li>
+                                <li>• <strong>Safety:</strong> Foot-operated dump valve (FOV)</li>
+                            </ul>
+                            <a href="#quote" class="mt-4 inline-block bg-cyanjet text-slatebg-deep px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-white transition">
+                                Request Hydro-Jet Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Chemical Cleaning & Acid Pickling -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div>
+                                <div class="w-14 h-14 rounded-xl bg-amberbrand/10 border border-amberbrand/40 flex items-center justify-center text-amberbrand text-2xl mb-6">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-amberbrand font-bold">DESCALING & PASSIVATION</span>
+                                <h3 class="text-xl font-bold text-white mt-1 mb-3">Chemical Cleaning & Pickling</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Specialized acid circulation for calcium carbonate, magnetite, and silica removal. Pre-commissioning degreasing and post-cleaning passivation.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs font-mono text-amberbrand">
+                                <span>Inhibited Formulations</span>
+                                <span>Flip for Specs &rarr;</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="font-bold text-white text-base mb-2 text-amberbrand">Chemical Methodologies</h4>
+                            <ul class="text-xs text-slate-300 space-y-2.5 font-mono">
+                                <li>• <strong>Acids:</strong> Inhibited HCl, Citric Acid, EDTA, Sulfamic</li>
+                                <li>• <strong>Neutralization:</strong> Soda Ash & Ammonia circulation</li>
+                                <li>• <strong>Monitoring:</strong> Continuous inline pH & iron titrations</li>
+                                <li>• <strong>Corrosion Rate:</strong> Verified &lt; 5 g/m²/hr via coupons</li>
+                                <li>• <strong>Target:</strong> Boilers, digesters & oil pipelines</li>
+                            </ul>
+                            <a href="#quote" class="mt-4 inline-block bg-amberbrand text-slatebg-deep px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-white transition">
+                                Inquire Chemical Cleaning
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Condenser & Boiler Descaling -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div>
+                                <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/40 flex items-center justify-center text-purple-400 text-2xl mb-6">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-purple-400 font-bold">THERMAL EFFICIENCY</span>
+                                <h3 class="text-xl font-bold text-white mt-1 mb-3">Condenser & Boiler Descaling</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Restoring turbine vacuum and boiler heat transfer rates. Complete tube clearing for power plant condensers up to 600 MW capacity.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs font-mono text-purple-400">
+                                <span>10,000+ Tubes per Turnaround</span>
+                                <span>Flip for Specs &rarr;</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="font-bold text-white text-base mb-2 text-purple-400">Turnaround Capabilities</h4>
+                            <ul class="text-xs text-slate-300 space-y-2.5 font-mono">
+                                <li>• <strong>Capacity:</strong> Units from 18.5 MW to 600 MW</li>
+                                <li>• <strong>Methods:</strong> 800–1100 BAR Hydro-Jet + Bullet brushing</li>
+                                <li>• <strong>Blocked Tubes:</strong> 100% clearing of choked tubes</li>
+                                <li>• <strong>Vacuum Gain:</strong> Up to 35-50 mmHg improvement</li>
+                                <li>• <strong>Execution:</strong> 24/7 round-the-clock shift staffing</li>
+                            </ul>
+                            <a href="#quote" class="mt-4 inline-block bg-purple-400 text-slatebg-deep px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-white transition">
+                                Inquire Descaling
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: NDT & Helium / Eddy Current Testing -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div>
+                                <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-2xl mb-6">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold">DIAGNOSTICS</span>
+                                <h3 class="text-xl font-bold text-white mt-1 mb-3">NDT & Tube Leak Inspection</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Pre and post-cleaning non-destructive diagnostics: Eddy Current Testing (ECT), Helium mass spectrometry leak detection, and wall thinning mapping.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs font-mono text-emerald-400">
+                                <span>ASNT Level II / III Standards</span>
+                                <span>Flip for Specs &rarr;</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="font-bold text-white text-base mb-2 text-emerald-400">Inspection Methods</h4>
+                            <ul class="text-xs text-slate-300 space-y-2.5 font-mono">
+                                <li>• <strong>Eddy Current (ECT):</strong> Detects pitting & erosion</li>
+                                <li>• <strong>Helium Testing:</strong> Sub-micron condenser tube leakage</li>
+                                <li>• <strong>Hydrostatic Test:</strong> Up to 1600 BAR hydraulic proofing</li>
+                                <li>• <strong>Video Borescope:</strong> 360° internal visual recording</li>
+                                <li>• <strong>Documentation:</strong> Comprehensive engineering reports</li>
+                            </ul>
+                            <a href="#quote" class="mt-4 inline-block bg-emerald-400 text-slatebg-deep px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-white transition">
+                                Request NDT Inspection
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Heat Exchanger Retubing & Repairs -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div>
+                                <div class="w-14 h-14 rounded-xl bg-rose-500/10 border border-rose-500/40 flex items-center justify-center text-rose-400 text-2xl mb-6">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-rose-400 font-bold">MECHANICAL OVERHAUL</span>
+                                <h3 class="text-xl font-bold text-white mt-1 mb-3">Retubing & Mechanical Repairs</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Complete extraction and replacement of damaged condenser, cooler, and heat exchanger tubes. Tube sheet reaming, grooving, and torque-controlled expansion.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs font-mono text-rose-400">
+                                <span>SS304, Cu-Ni, Brass & Titanium</span>
+                                <span>Flip for Specs &rarr;</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="font-bold text-white text-base mb-2 text-rose-400">Mechanical Scope</h4>
+                            <ul class="text-xs text-slate-300 space-y-2.5 font-mono">
+                                <li>• <strong>Tube Pulling:</strong> Hydraulic spear pullers up to 35 tons</li>
+                                <li>• <strong>Tube Expanding:</strong> Digital torque-controlled roll expanders</li>
+                                <li>• <strong>Baffle Repair:</strong> Alignment & tie rod replacement</li>
+                                <li>• <strong>Gasket Services:</strong> Neoprene, CAF & spiral wound replacement</li>
+                                <li>• <strong>Pressure Proofing:</strong> Flange hydrostatic validation</li>
+                            </ul>
+                            <a href="#quote" class="mt-4 inline-block bg-rose-400 text-slatebg-deep px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-white transition">
+                                Inquire Retubing
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Finfan & Pipeline Pigging -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div>
+                                <div class="w-14 h-14 rounded-xl bg-sky-500/10 border border-sky-500/40 flex items-center justify-center text-sky-400 text-2xl mb-6">
+                                    <i class="fas fa-fan"></i>
+                                </div>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-sky-400 font-bold">AIR-COOLED & PIPELINES</span>
+                                <h3 class="text-xl font-bold text-white mt-1 mb-3">Fin-Fan Coolers & Pipelines</h3>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    External fin-fan cleaning without bending delicate aluminum fins. Long-distance industrial pipeline descaling, ash slurry line cleaning, and oil piping.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs font-mono text-sky-400">
+                                <span>Refinery & Petrochem</span>
+                                <span>Flip for Specs &rarr;</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="font-bold text-white text-base mb-2 text-sky-400">Pipeline & Fin Scope</h4>
+                            <ul class="text-xs text-slate-300 space-y-2.5 font-mono">
+                                <li>• <strong>Fin-Fans:</strong> Low-pressure high-volume foam washing</li>
+                                <li>• <strong>Zero Damage:</strong> Guaranteed no fin flattening</li>
+                                <li>• <strong>Pipelines:</strong> Rotary jet lances for lines up to 500m length</li>
+                                <li>• <strong>Diameters:</strong> 2-inch to 48-inch process piping</li>
+                                <li>• <strong>Residues:</strong> Tar, coke, bitumen, scale, & slurry</li>
+                            </ul>
+                            <a href="#quote" class="mt-4 inline-block bg-sky-400 text-slatebg-deep px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-white transition">
+                                Inquire Pipeline Work
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPMENT FLEET: 15 Advanced Machines & 1100 BAR Engineering -->
+    <section id="equipment" class="py-24 max-w-7xl mx-auto px-6 relative z-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Info -->
+            <div class="lg:col-span-6 space-y-6">
+                <span class="tech-chip gold-chip">Heavy Equipment Fleet</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">
+                    15 Specialized Heavy-Duty Machine Units
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed font-light">
+                    Our fleet comprises heavy industrial triplex plunger pumps engineered by global leaders including PressureJet, Hawk, and WOMA. Mobile trailer configurations allow swift deployment straight onto boiler floors and turbine decks.
+                </p>
+
+                <!-- Spec Table -->
+                <div class="overflow-x-auto bg-slatebg-card rounded-2xl border border-white/10 p-2 shadow-xl">
+                    <table class="w-full text-left text-xs font-mono text-slate-300">
+                        <thead class="bg-white/5 text-amberbrand uppercase tracking-wider border-b border-white/10">
+                            <tr>
+                                <th class="p-3">Equipment Type</th>
+                                <th class="p-3">Max Pressure</th>
+                                <th class="p-3">Flow Rate</th>
+                                <th class="p-3">Drive Power</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3 font-bold text-white">Ultra-High Trailer Unit</td>
+                                <td class="p-3 text-cyanjet font-bold">1100 BAR (16,000 PSI)</td>
+                                <td class="p-3">35 - 55 LPM</td>
+                                <td class="p-3">90 kW Electric / Diesel</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3 font-bold text-white">High-Flow Sludge Unit</td>
+                                <td class="p-3 text-cyanjet">500 BAR (7,250 PSI)</td>
+                                <td class="p-3">80 - 120 LPM</td>
+                                <td class="p-3">75 kW Electric Drive</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3 font-bold text-white">Standard Descaling Unit</td>
+                                <td class="p-3 text-cyanjet">750 BAR (10,800 PSI)</td>
+                                <td class="p-3">45 - 65 LPM</td>
+                                <td class="p-3">60 kW Electric Drive</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3 font-bold text-white">Chemical Circulation Skid</td>
+                                <td class="p-3 text-amberbrand">15 BAR Circulation</td>
+                                <td class="p-3">250 - 500 LPM</td>
+                                <td class="p-3">Acid-Proof Magnetic Drive</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex flex-wrap gap-4 text-xs font-mono text-slate-300">
+                    <span class="bg-white/5 px-3 py-1.5 rounded-lg border border-white/10"><i class="fas fa-shield-alt text-amberbrand mr-1.5"></i> Dual Foot Dump Valves</span>
+                    <span class="bg-white/5 px-3 py-1.5 rounded-lg border border-white/10"><i class="fas fa-check-circle text-cyanjet mr-1.5"></i> Welkin 1600 BAR Tested Hoses</span>
+                    <span class="bg-white/5 px-3 py-1.5 rounded-lg border border-white/10"><i class="fas fa-bolt text-amberbrand mr-1.5"></i> Flameproof (FLP) Switchgears</span>
+                </div>
+            </div>
+
+            <!-- Right Visual: Triplex Pump Head 3D Render & Mobile Unit -->
+            <div class="lg:col-span-6 space-y-6">
+                <div class="glass-panel rounded-3xl overflow-hidden border border-white/15 p-3 shadow-2xl relative">
+                    <img src="assets/triplex_trailer_rig.jpg" alt="1100 BAR Triplex Plunger Pump Trailer Unit" class="w-full h-80 object-cover rounded-2xl">
+                    <div class="absolute bottom-6 left-6 right-6 bg-slatebg-deep/90 backdrop-blur-md p-4 rounded-xl border border-white/15 flex justify-between items-center">
+                        <div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-cyanjet font-bold">HEAVY FLEET</span>
+                            <h4 class="font-bold text-white text-base">Mobile 1100 BAR Trailer Rig</h4>
+                        </div>
+                        <a href="#quote" class="bg-amberbrand hover:bg-amber-400 text-slatebg-deep px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider transition">
+                            Book Unit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ON-SITE OPERATIONS GALLERY: Pristine 4K Visuals (No Awkward Blue Cuts!) -->
+    <section id="operations" class="py-24 bg-slatebg-surface relative z-20 border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="tech-chip">Field Execution Documentation</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white mt-3">High-Pressure Action On-Site</h2>
+                <p class="text-slate-400 text-base md:text-lg font-light mt-2 max-w-2xl">
+                    High-definition field documentation across thermal power plants, integrated steel mills, and chemical refineries.
+                </p>
+            </div>
+
+            <!-- 6 Pristine Cards (Replaces Old Blue-Bordered Crops with 4K Imagery) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Image 1: Real On-Site Condenser Blasting -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/15 bg-slatebg-card h-80 shadow-xl transition-all duration-300 hover:border-cyanjet/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)]">
+                    <img src="assets/onsite_condenser_blasting.jpg" alt="Real on-site condenser tube hydro-blasting" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 filter brightness-95 contrast-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slatebg-deep via-slatebg-deep/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-amberbrand bg-amberbrand/10 border border-amberbrand/30 px-2.5 py-1 rounded">On-Site Execution</span>
+                        <h4 class="font-bold text-white text-lg mt-2">Condenser Tube Hydro-Blasting</h4>
+                        <p class="text-xs text-slate-300 mt-1">Technician in high-pressure protective suit clearing rock-hard deposit at thermal plant.</p>
+                    </div>
+                </div>
+
+                <!-- Image 2: AI 1100 BAR Trailer Unit in Plant -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/15 bg-slatebg-card h-80 shadow-xl transition-all duration-300 hover:border-cyanjet/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)]">
+                    <img src="assets/triplex_trailer_rig.jpg" alt="1100 BAR mobile hydro-jetting trailer pump" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 filter brightness-95 contrast-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slatebg-deep via-slatebg-deep/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-cyanjet bg-cyanjet/10 border border-cyanjet/30 px-2.5 py-1 rounded">1100 BAR Machine Fleet</span>
+                        <h4 class="font-bold text-white text-lg mt-2">Triplex Trailer Pump Rig</h4>
+                        <p class="text-xs text-slate-300 mt-1">Continuous-duty plunger pump with stainless manifold & high-pressure hose reels.</p>
+                    </div>
+                </div>
+
+                <!-- Image 3: Condenser Tubesheet Cleaning AI -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/15 bg-slatebg-card h-80 shadow-xl transition-all duration-300 hover:border-cyanjet/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)]">
+                    <img src="assets/condenser_cleaning.jpg" alt="Condenser tube cleaning with high pressure water jet" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 filter brightness-95 contrast-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slatebg-deep via-slatebg-deep/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-purple-400 bg-purple-500/10 border border-purple-500/30 px-2.5 py-1 rounded">Thermal Turnaround</span>
+                        <h4 class="font-bold text-white text-lg mt-2">Surface Condenser Descaling</h4>
+                        <p class="text-xs text-slate-300 mt-1">Precision lancing clearing 100% choked stainless steel tubes to restore turbine backpressure.</p>
+                    </div>
+                </div>
+
+                <!-- Image 4: Chemical Descaling Skid -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/15 bg-slatebg-card h-80 shadow-xl transition-all duration-300 hover:border-cyanjet/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)]">
+                    <img src="assets/chemical_descaling_skid.jpg" alt="Chemical descaling circulation and neutralization skid" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 filter brightness-95 contrast-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slatebg-deep via-slatebg-deep/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-amberbrand bg-amberbrand/10 border border-amberbrand/30 px-2.5 py-1 rounded">Process System</span>
+                        <h4 class="font-bold text-white text-lg mt-2">Chemical Circulation Skid</h4>
+                        <p class="text-xs text-slate-300 mt-1">Multi-stage acid circulation manifold with digital pH monitoring and neutralization tanks.</p>
+                    </div>
+                </div>
+
+                <!-- Image 5: Operator Ballistic Safety Suit -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/15 bg-slatebg-card h-80 shadow-xl transition-all duration-300 hover:border-cyanjet/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)]">
+                    <img src="assets/operator_safety_suit.jpg" alt="Certified operator ballistic suit and foot control valve" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 filter brightness-95 contrast-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slatebg-deep via-slatebg-deep/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded">Safety Protocol</span>
+                        <h4 class="font-bold text-white text-lg mt-2">Ballistic Suit & Foot Valve</h4>
+                        <p class="text-xs text-slate-300 mt-1">Kevlar ballistic armor rated for 2000 BAR water jet deflection with dead-man foot controls.</p>
+                    </div>
+                </div>
+
+                <!-- Image 6: Triplex Plunger Pump Head -->
+                <div class="group relative rounded-2xl overflow-hidden border border-white/15 bg-slatebg-card h-80 shadow-xl transition-all duration-300 hover:border-cyanjet/50 hover:shadow-[0_10px_30px_rgba(0,240,255,0.15)]">
+                    <img src="assets/triplex_pump_head.jpg" alt="High pressure triplex plunger pump head" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 filter brightness-95 contrast-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slatebg-deep via-slatebg-deep/40 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-sky-400 bg-sky-500/10 border border-sky-500/30 px-2.5 py-1 rounded">Pump Engineering</span>
+                        <h4 class="font-bold text-white text-lg mt-2">Triplex Plunger Fluid Head</h4>
+                        <p class="text-xs text-slate-300 mt-1">Forged stainless steel fluid end with ceramic plungers for continuous 1100 BAR operation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES & TWO-STEP CLEANING METHODOLOGY -->
+    <section id="case-study" class="py-24 max-w-7xl mx-auto px-6 relative z-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <span class="tech-chip gold-chip">Proven Plant Case Study</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
+                    210 MW Thermal Station Condenser Turnaround
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed font-light">
+                    At a major thermal power station, severe silica and calcium scale had choked over 4,200 condenser tubes, causing excessive turbine exhaust backpressure and risking a 60 MW generation curtailment.
+                </p>
+
+                <!-- Two-Step Process Comparison Card -->
+                <div class="bg-slatebg-card p-6 rounded-2xl border border-white/10 space-y-4">
+                    <h4 class="text-white font-bold text-base flex items-center gap-2">
+                        <i class="fas fa-layer-group text-amberbrand"></i> The VIA Two-Step Synergistic Method
+                    </h4>
+                    
+                    <div class="space-y-3 text-xs font-mono">
+                        <div class="p-3 rounded-lg bg-white/5 border border-white/10 flex items-start gap-3">
+                            <span class="bg-amberbrand text-slatebg-deep font-bold px-2 py-0.5 rounded">STEP 1</span>
+                            <div>
+                                <strong class="text-white">Inhibited Chemical Circulation:</strong> Softens dense silica matrix without etching underlying parent tube metal.
+                            </div>
+                        </div>
+                        <div class="p-3 rounded-lg bg-white/5 border border-white/10 flex items-start gap-3">
+                            <span class="bg-cyanjet text-slatebg-deep font-bold px-2 py-0.5 rounded">STEP 2</span>
+                            <div>
+                                <strong class="text-white">1100 BAR High-Velocity Lancing:</strong> Dislodges softened scale plugs and ejects them cleanly from tube bore.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result Metrics -->
+                    <div class="pt-3 border-t border-white/10 grid grid-cols-3 gap-3 text-center">
+                        <div class="bg-slatebg-deep p-3 rounded-xl">
+                            <span class="text-xl font-black text-emerald-400 font-heading">100%</span>
+                            <span class="block text-[10px] text-slate-400 uppercase mt-0.5">Tubes Cleared</span>
+                        </div>
+                        <div class="bg-slatebg-deep p-3 rounded-xl">
+                            <span class="text-xl font-black text-cyanjet font-heading">42 mmHg</span>
+                            <span class="block text-[10px] text-slate-400 uppercase mt-0.5">Vacuum Gain</span>
+                        </div>
+                        <div class="bg-slatebg-deep p-3 rounded-xl">
+                            <span class="text-xl font-black text-amberbrand font-heading">4.2 MW</span>
+                            <span class="block text-[10px] text-slate-400 uppercase mt-0.5">Output Restored</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-6">
+                <!-- Safety Blueprint Infographic Embed -->
+                <div class="glass-panel rounded-3xl p-3 border border-white/15 shadow-2xl">
+                    <img src="assets/safety_blueprint.jpg" alt="VIA Blueprint for Industrial Safety and Reliability" class="w-full h-auto rounded-2xl object-cover hover:scale-102 transition duration-500">
+                    <div class="p-4 text-xs font-mono text-slate-300 flex justify-between items-center">
+                        <span><i class="fas fa-shield-alt text-cyanjet mr-1"></i> ISO 45001 & ISO 9001 Safety Protocol</span>
+                        <span class="text-amberbrand">Zero Compromise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT PARTNERS MARQUEE: Enterprise Credibility -->
+        <!-- CLIENT PARTNERS MARQUEE: Enterprise Credibility -->
+        <!-- CLIENT PARTNERS MARQUEE: Enterprise Credibility (Single Continuous Line Moving Right to Left) -->
+        <!-- CLIENT PARTNERS MARQUEE: Enterprise Credibility (Single Continuous Line Moving Right to Left) -->
+    <section id="partners" class="bg-white py-14 relative z-20 border-y-2 border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 mb-7 text-center">
+            <span class="text-xs font-mono uppercase tracking-widest text-slate-500 font-bold block mb-1">TRUSTED BY INDUSTRY TITANS</span>
+            <h3 class="text-2xl sm:text-3xl font-black text-slate-900 font-heading">
+                Serving India's Largest Power, Steel & Cement Plants
+            </h3>
+            <p class="text-xs font-mono text-slate-500 mt-1 uppercase tracking-wider">Thermal Power Stations • Integrated Steel Mills • Cement Works • Process Plants</p>
+        </div>
+
+        <div class="marquee-wrapper">
+            <!-- Single Continuous Line Moving from Right to Left -->
+            <div class="marquee-track">
+                <div class="marquee-item"><span class="brand-pill font-bold">TATA STEEL LTD. (JODA PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">KSK MAHANADI POWER COMPANY</span></div><div class="marquee-item"><span class="brand-pill font-bold">AMBUJA CEMENTS (MARATHA / UPPERWAHI)</span></div><div class="marquee-item"><span class="brand-pill font-bold">ULTRATECH CEMENT (AWARPUR WORKS)</span></div><div class="marquee-item"><span class="brand-pill font-bold">ACC CEMENT (WADI & CHANDA PLANTS)</span></div><div class="marquee-item"><span class="brand-pill font-bold">LLOYDS METALS AND ENERGY LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">MAHAGENCO (CSTPS CHANDRAPUR)</span></div><div class="marquee-item"><span class="brand-pill font-bold">KORADI THERMAL POWER STATION (KTPS)</span></div><div class="marquee-item"><span class="brand-pill font-bold">TATA POWER (MAUDA PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">DALMIA CEMENT BHARAT LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">BIRLA CORP / RCCPL (MUKUTBAN CEMENT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">JSW STEEL (NAHARPARLI)</span></div><div class="marquee-item"><span class="brand-pill font-bold">MIVAAN STEELS (JSW SUBSIDIARY)</span></div><div class="marquee-item"><span class="brand-pill font-bold">SUNFLAG IRON & STEEL CO. LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">SAL STEEL LIMITED (KUTCH PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">MAITHAN ISPAT LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">OCL IRON & STEELS LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">NCPL (NILKANTH CONCAST CPP)</span></div><div class="marquee-item"><span class="brand-pill font-bold">ROOPGARH POWER & ALLOYS PVT. LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">THAKUR PRASAD SAO & SONS PVT. LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">SANVIJAY ALLOYS</span></div><div class="marquee-item"><span class="brand-pill font-bold">FACOR (RANDIA POWER PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">VEDANTA RESOURCES / FASOR</span></div><div class="marquee-item"><span class="brand-pill font-bold">SAIL (CHANDRAPUR FERRO ALLOY)</span></div><div class="marquee-item"><span class="brand-pill font-bold">SHYAM METALICS & ENERGY LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">INDO RAMA SYNTHETICS (BUTIBORI)</span></div><div class="marquee-item"><span class="brand-pill font-bold">BILT GRAPHIC PAPER (BGPPL)</span></div><div class="marquee-item"><span class="brand-pill font-bold">MURLI INDUSTRIES LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">MANAS AGRO INDUSTRIES (BELA PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">VAYUNANDANA POWER LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">BALAJI POWER (HIRA FERRO ALLOYS)</span></div><div class="marquee-item"><span class="brand-pill font-bold">SHREE NAKODA ISPAT (RAIPUR)</span></div><div class="marquee-item"><span class="brand-pill font-bold">CHEMBOND CHEMICALS LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">RAJNANDGAON OIL PRESSING PLANT</span></div><div class="marquee-item"><span class="brand-pill font-bold">MIDC INDUSTRIES (BUTIBORI / HINGNA / KALMESHWAR)</span></div><div class="marquee-item"><span class="brand-pill font-bold">PRESSUREJET SYSTEMS (VATVA)</span></div><div class="marquee-item"><span class="brand-pill font-bold">INSTANT PROCUREMENT SERVICES (PROCMART)</span></div><div class="marquee-item"><span class="brand-pill font-bold">GODAVARI ENGINEERING LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">EMAMI PAPER MILLS</span></div><div class="marquee-item"><span class="brand-pill font-bold">VISA STEEL LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">LOCAL STEEL & ROLLING MILLS (BHANDARA/KAMPTEE)</span></div><div class="marquee-item"><span class="brand-pill font-bold">TATA STEEL LTD. (JODA PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">KSK MAHANADI POWER COMPANY</span></div><div class="marquee-item"><span class="brand-pill font-bold">AMBUJA CEMENTS (MARATHA / UPPERWAHI)</span></div><div class="marquee-item"><span class="brand-pill font-bold">ULTRATECH CEMENT (AWARPUR WORKS)</span></div><div class="marquee-item"><span class="brand-pill font-bold">ACC CEMENT (WADI & CHANDA PLANTS)</span></div><div class="marquee-item"><span class="brand-pill font-bold">LLOYDS METALS AND ENERGY LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">MAHAGENCO (CSTPS CHANDRAPUR)</span></div><div class="marquee-item"><span class="brand-pill font-bold">KORADI THERMAL POWER STATION (KTPS)</span></div><div class="marquee-item"><span class="brand-pill font-bold">TATA POWER (MAUDA PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">DALMIA CEMENT BHARAT LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">BIRLA CORP / RCCPL (MUKUTBAN CEMENT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">JSW STEEL (NAHARPARLI)</span></div><div class="marquee-item"><span class="brand-pill font-bold">MIVAAN STEELS (JSW SUBSIDIARY)</span></div><div class="marquee-item"><span class="brand-pill font-bold">SUNFLAG IRON & STEEL CO. LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">SAL STEEL LIMITED (KUTCH PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">MAITHAN ISPAT LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">OCL IRON & STEELS LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">NCPL (NILKANTH CONCAST CPP)</span></div><div class="marquee-item"><span class="brand-pill font-bold">ROOPGARH POWER & ALLOYS PVT. LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">THAKUR PRASAD SAO & SONS PVT. LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">SANVIJAY ALLOYS</span></div><div class="marquee-item"><span class="brand-pill font-bold">FACOR (RANDIA POWER PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">VEDANTA RESOURCES / FASOR</span></div><div class="marquee-item"><span class="brand-pill font-bold">SAIL (CHANDRAPUR FERRO ALLOY)</span></div><div class="marquee-item"><span class="brand-pill font-bold">SHYAM METALICS & ENERGY LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">INDO RAMA SYNTHETICS (BUTIBORI)</span></div><div class="marquee-item"><span class="brand-pill font-bold">BILT GRAPHIC PAPER (BGPPL)</span></div><div class="marquee-item"><span class="brand-pill font-bold">MURLI INDUSTRIES LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">MANAS AGRO INDUSTRIES (BELA PLANT)</span></div><div class="marquee-item"><span class="brand-pill font-bold">VAYUNANDANA POWER LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">BALAJI POWER (HIRA FERRO ALLOYS)</span></div><div class="marquee-item"><span class="brand-pill font-bold">SHREE NAKODA ISPAT (RAIPUR)</span></div><div class="marquee-item"><span class="brand-pill font-bold">CHEMBOND CHEMICALS LTD.</span></div><div class="marquee-item"><span class="brand-pill font-bold">RAJNANDGAON OIL PRESSING PLANT</span></div><div class="marquee-item"><span class="brand-pill font-bold">MIDC INDUSTRIES (BUTIBORI / HINGNA / KALMESHWAR)</span></div><div class="marquee-item"><span class="brand-pill font-bold">PRESSUREJET SYSTEMS (VATVA)</span></div><div class="marquee-item"><span class="brand-pill font-bold">INSTANT PROCUREMENT SERVICES (PROCMART)</span></div><div class="marquee-item"><span class="brand-pill font-bold">GODAVARI ENGINEERING LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">EMAMI PAPER MILLS</span></div><div class="marquee-item"><span class="brand-pill font-bold">VISA STEEL LIMITED</span></div><div class="marquee-item"><span class="brand-pill font-bold">LOCAL STEEL & ROLLING MILLS (BHANDARA/KAMPTEE)</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATUTORY COMPLIANCE & CERTIFICATIONS (Banking details completely deleted!) -->
+        <!-- STATUTORY COMPLIANCE & CERTIFICATIONS -->
+    <section id="compliance" class="py-24 bg-slatebg-deep relative z-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="tech-chip">Statutory & Technical Credentials</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white">Compliance & Accreditations</h2>
+                <p class="text-slate-400 text-base md:text-lg font-light">
+                    Fully empaneled for public and private sector tenders with certified statutory registrations, chemical purity assays, and high-pressure hose proof testing.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cert 1: ISO Standards -->
+                <div class="bg-slatebg-card p-6 rounded-2xl border border-white/10 space-y-3 hover:border-amberbrand/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amberbrand/10 border border-amberbrand/30 flex items-center justify-center text-amberbrand text-xl">
+                        <i class="fas fa-ribbon"></i>
+                    </div>
+                    <span class="text-xs font-mono uppercase text-amberbrand font-bold">Quality & Safety</span>
+                    <h4 class="font-bold text-white text-lg">ISO 9001:2015 &amp; ISO 45001:2018</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Certified Quality Management Systems and Occupational Health &amp; Safety Management for heavy high-pressure industrial cleaning operations.
+                    </p>
+                    <div class="pt-2 text-[11px] font-mono text-amberbrand/90 border-t border-white/5">
+                        Scope: Hydro-Jetting up to 1100 BAR &amp; Turnarounds
+                    </div>
+                </div>
+
+                <!-- Cert 2: MSME & GST Statutory -->
+                <div class="bg-slatebg-card p-6 rounded-2xl border border-white/10 space-y-3 hover:border-cyanjet/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-cyanjet/10 border border-cyanjet/30 flex items-center justify-center text-cyanjet text-xl">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <span class="text-xs font-mono uppercase text-cyanjet font-bold">Government Empanelment</span>
+                    <h4 class="font-bold text-white text-lg">MSME &amp; GSTIN Registration</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed font-mono">
+                        GSTIN: <strong class="text-white">27AHTPM2150M1ZU</strong><br>
+                        MSME UDYAM: <strong class="text-white">UDYAM-MH-08-0024043</strong><br>
+                        Fully compliant for major corporate &amp; government tenders.
+                    </p>
+                    <div class="pt-2 text-[11px] font-mono text-cyanjet/90 border-t border-white/5">
+                        Govt of India Form GST REG-06 Verified
+                    </div>
+                </div>
+
+                <!-- Cert 3: Pressure Equipment Proofing -->
+                <div class="bg-slatebg-card p-6 rounded-2xl border border-white/10 space-y-3 hover:border-emerald-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <span class="text-xs font-mono uppercase text-emerald-400 font-bold">Welkin &amp; Parker Certified</span>
+                    <h4 class="font-bold text-white text-lg">1600 BAR Hydraulic Proof Test</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Parker flexible and rigid lances hydrostatically proof-tested up to 1600 BAR with stainless steel fittings to guarantee operator safety.
+                    </p>
+                    <div class="pt-2 text-[11px] font-mono text-emerald-400/90 border-t border-white/5">
+                        Test Cert: Welkin India • Working: 1100 BAR
+                    </div>
+                </div>
+
+                <!-- Cert 4: Chemical Certificate (Shakti Chemicals Sulfamic Acid) -->
+                <div class="bg-slatebg-card p-6 rounded-2xl border border-white/10 space-y-3 hover:border-purple-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <span class="text-xs font-mono uppercase text-purple-400 font-bold">Chemical Purity Certificate</span>
+                    <h4 class="font-bold text-white text-lg">98.5% Pure Sulfamic Acid Descalent</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Shakti Chemicals certified technical-grade descaling acid with proprietary organic corrosion inhibitors. Formulated to safely dissolve carbonate &amp; silica scale with zero parent metal attack.
+                    </p>
+                    <div class="pt-2 text-[11px] font-mono text-purple-400/90 border-t border-white/5">
+                        Assay: 98.5% Min • Fe &lt; 15 ppm • SO4 &lt; 0.05%
+                    </div>
+                </div>
+
+                <!-- Cert 5: High-Pressure Hose Assemblies & Rigid Lances -->
+                <div class="bg-slatebg-card p-6 rounded-2xl border border-white/10 space-y-3 hover:border-sky-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-xl">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <span class="text-xs font-mono uppercase text-sky-400 font-bold">Hose &amp; Pipe Proofing</span>
+                    <h4 class="font-bold text-white text-lg">Parker 4-Spiral Hydraulic Hoses</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Heavy-duty thermoplastic and spiral wire hydraulic hoses equipped with SS304 male couplings and bend restrictors. Hydrostatically pressure-validated for continuous high-flow service.
+                    </p>
+                    <div class="pt-2 text-[11px] font-mono text-sky-400/90 border-t border-white/5">
+                        Burst Rating: 2,800 BAR • Safety Ratio 4:1
+                    </div>
+                </div>
+
+                <!-- Cert 6: Ballistic Operator Armor & Safety Valves -->
+                <div class="bg-slatebg-card p-6 rounded-2xl border border-white/10 space-y-3 hover:border-rose-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 text-xl">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <span class="text-xs font-mono uppercase text-rose-400 font-bold">Operator Safety Protocol</span>
+                    <h4 class="font-bold text-white text-lg">2000 BAR Ballistic PPE &amp; FOV</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Certified multi-layer Kevlar ballistic gaiters, chest aprons, and dead-man foot-operated dump valves (FOV) providing instant line depressurization under 0.2s for zero-incident execution.
+                    </p>
+                    <div class="pt-2 text-[11px] font-mono text-rose-400/90 border-t border-white/5">
+                        Ballistic Rating: 2000 BAR • Dump Time: &lt; 0.2s
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATSAPP TECHNICAL QUOTATION & ENQUIRY SYSTEM (High-Visibility, Instant Dispatch) -->
+    <section id="quote" class="py-24 bg-slatebg-surface relative z-20 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-slatebg-deep rounded-3xl border border-white/15 p-8 md:p-14 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="tech-chip gold-chip">Instant Engineering Estimation</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">Request a Technical Quotation</h2>
+                    <p class="text-slate-300 text-base md:text-lg leading-relaxed font-light">
+                        Submit your equipment specs, tube dimensions, or planned turnaround schedule. Your requirements will be instantly structured and dispatched directly to our lead engineers via WhatsApp.
+                    </p>
+
+                    <div class="space-y-3 text-sm text-slate-300">
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-amberbrand text-base"></i> <span>Direct mobilization feasibility for Maharashtra & Central India</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-amberbrand text-base"></i> <span>Transparent lump-sum quotation including crew & safety rigs</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-amberbrand text-base"></i> <span>Technical review by Managing Director P.C. Mitra</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-check-circle text-amberbrand text-base"></i> <span>Emergency dispatch ready within 2 hours for urgent outages</span></div>
+                    </div>
+
+                    <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-6">
+                        <div>
+                            <span class="text-xs uppercase font-mono tracking-widest text-slate-400 block mb-1">Direct Call Lines</span>
+                            <a href="tel:+919422837904" class="text-xl font-bold text-cyanjet hover:text-white transition block font-mono">+91 9422837904</a>
+                            <span class="text-xs text-slate-400 font-mono">+91 9770215590 / 7020242995</span>
+                        </div>
+                        <div>
+                            <span class="text-xs uppercase font-mono tracking-widest text-slate-400 block mb-1">Direct Email</span>
+                            <a href="mailto:vidarbha.industrial.associates@gmail.com" class="text-sm font-bold text-slate-200 hover:text-amberbrand transition break-all">
+                                vidarbha.industrial.associates@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form: High Contrast, Crisp Inputs -->
+                <div class="lg:col-span-6 bg-slatebg-card p-6 md:p-8 rounded-2xl border border-white/15 shadow-2xl">
+                    <form onsubmit="submitQuote(event)" class="space-y-4">
+                        <div>
+                            <label for="q-name" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Company / Enterprise Name *</label>
+                            <input type="text" id="q-name" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" placeholder="Your Company Name" required>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="q-phone" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Phone Number *</label>
+                                <input type="tel" id="q-phone" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" placeholder="+91 98XXX XXXXX" required>
+                            </div>
+                            <div>
+                                <label for="q-location" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Plant Site Location *</label>
+                                <input type="text" id="q-location" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" placeholder="e.g., Chandrapur, Nagpur, Raipur" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="q-service" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Required Service *</label>
+                                <select id="q-service" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" required>
+                                    <option value="" disabled selected>Select Primary Service</option>
+                                    <option value="Hydrojet Cleaning (150-1100 Bar)">Hydrojet Cleaning (150-1100 Bar)</option>
+                                    <option value="Boiler & Condenser Descaling">Boiler & Condenser Descaling</option>
+                                    <option value="Chemical Cleaning / Acid Pickling">Chemical Cleaning / Acid Pickling</option>
+                                    <option value="Eddy Current / Helium NDT Testing">Eddy Current / Helium NDT Testing</option>
+                                    <option value="Heat Exchanger Re-tubing & Repair">Heat Exchanger Re-tubing & Repair</option>
+                                    <option value="Fin-Fan & Process Pipeline Cleaning">Fin-Fan & Process Pipeline Cleaning</option>
+                                    <option value="Emergency Plant Shutdown Mobilization">Emergency Plant Shutdown Mobilization</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="q-pressure" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Target Pressure Tier</label>
+                                <select id="q-pressure" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm">
+                                    <option value="Auto-Assess by Engineer" selected>Auto-Assess by Engineer</option>
+                                    <option value="150 - 400 BAR (Light/Medium Deposit)">150 - 400 BAR (Light/Medium Deposit)</option>
+                                    <option value="600 - 800 BAR (Heavy Scale & Ash)">600 - 800 BAR (Heavy Scale & Ash)</option>
+                                    <option value="1000 - 1100 BAR (Maximum Power)">1000 - 1100 BAR (Maximum Power)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="q-details" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Scope / Tube Count / Equipment Details *</label>
+                            <textarea id="q-details" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" rows="3" placeholder="e.g., 210 MW Surface Condenser, ~7,000 SS304 tubes, severe silica scaling..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white py-4 rounded-xl font-bold text-base transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-[0_0_25px_rgba(16,185,129,0.4)]">
+                            <i class="fab fa-whatsapp text-2xl"></i> Dispatch to WhatsApp (+91 9422837904)
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER: Single Authentic Logo, Registered Office & Quick Links -->
+    <footer class="bg-slatebg-deep pt-16 pb-12 border-t border-white/10 relative z-20 text-slate-400">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+                <!-- Col 1: Brand & Bio -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3.5 mb-2">
+                        <div class="h-12 w-12 rounded-xl bg-white p-1 shadow-md border-2 border-amberbrand flex items-center justify-center">
+                            <img src="assets/via_logo_badge.png" alt="Official VIA Logo" class="h-full w-full object-contain" onerror="this.src='Logo.png';">
+                        </div>
+                        <div>
+                            <span class="font-heading font-black text-xl text-white tracking-tight leading-none block">VIDARBHA INDUSTRIAL</span>
+                            <span class="text-[10px] font-mono tracking-widest text-cyanjet font-bold uppercase mt-1 block">Associates • Established 1997</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-md font-light">
+                        Vidarbha Industrial Associates (Est. 1997) is an industry-leading engineering contractor specializing in ultra-high-pressure hydro-jetting up to 1100 BAR, chemical circulation descaling, retubing, and non-destructive testing based in Chandrapur, Maharashtra.
+                    </p>
+                    <div class="pt-2 text-xs text-amber-300 font-semibold italic">
+                        "Your satisfaction isn't our goal — it's our guarantee. We work until it's done right."
+                    </div>
+                </div>
+
+                <!-- Col 2: Registered Office -->
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="text-white font-bold text-base tracking-wide border-b border-white/10 pb-2">Registered Office & Yard</h4>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-amberbrand mt-1"></i>
+                            <span>Maya Decoration, Nr Durga Mata Mandir,<br>Bye Pass Road, Bengali Camp Market,<br>Chandrapur - 442401, Maharashtra, India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-amberbrand"></i>
+                            <span class="font-mono text-cyanjet">+91 9422837904 / 9770215590</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-amberbrand"></i>
+                            <span class="break-all">vidarbha.industrial.associates@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-shield-alt text-amberbrand"></i>
+                            <span class="text-xs font-mono">GSTIN: 27AHTPM2150M1ZU • MSME: MH-08-0024043</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Quick Navigation -->
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="text-white font-bold text-base tracking-wide border-b border-white/10 pb-2">Quick Navigation</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#about" class="hover:text-amberbrand transition">Heritage & Leadership</a></li>
+                        <li><a href="#services" class="hover:text-amberbrand transition">Specialized Services</a></li>
+                        <li><a href="#equipment" class="hover:text-amberbrand transition">15 Advanced Machines</a></li>
+                        <li><a href="#operations" class="hover:text-amberbrand transition">On-Site Operations Gallery</a></li>
+                        <li><a href="#case-study" class="hover:text-amberbrand transition">Turnaround Case Studies</a></li>
+                        <li><a href="#compliance" class="hover:text-amberbrand transition">Statutory Compliance</a></li>
+                        <li><a href="#quote" class="hover:text-amberbrand transition">Request Instant Quotation</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-slate-500">
+                <div>&copy; 1997–2026 Vidarbha Industrial Associates. All rights reserved.</div>
+                <div class="flex gap-4">
+                    <a href="#top" class="hover:text-cyanjet transition">Back to Top &uarr;</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON (Always Accessible) -->
+    <a href="https://wa.me/919422837904?text=Hello%20Vidarbha%20Industrial%20Associates,%20I%20would%20like%20to%20inquire%20about%20industrial%20hydro-jetting%20services." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white h-14 w-14 rounded-full shadow-[0_0_25px_rgba(37,211,102,0.5)] flex items-center justify-center text-3xl hover:scale-110 transition-all duration-300" aria-label="Contact VIA Directly on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JAVASCRIPT: Interactive Canvas Simulator, WhatsApp Form & Mobile Navigation -->
+    <script>
+        // 1. Mobile Menu Handling
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileMenuClose');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('-translate-x-full');
+        }
+
+        if (mobileBtn) mobileBtn.addEventListener('click', toggleMenu);
+        if (mobileClose) mobileClose.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full');
+            });
+        });
+
+                        // 2. Interactive Rust-Cleaning Canvas Engine (Clean Plain Erasure, Zero Visual Clutter)
+        const canvas = document.getElementById('cleanCanvas');
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        let width, height;
+        let mouseX = 0, mouseY = 0, lastX = 0, lastY = 0;
+
+        function resizeCanvas() {
+            if (!canvas) return;
+            width = canvas.parentElement.clientWidth || 400;
+            height = canvas.parentElement.clientHeight || 280;
+            canvas.width = width;
+            canvas.height = height;
+            initRustLayer();
+        }
+
+        function initRustLayer() {
+            // Natural dense boiler scale & rust deposit layer
+            const grad = ctx.createLinearGradient(0, 0, width, height);
+            grad.addColorStop(0, '#3e2723');
+            grad.addColorStop(0.35, '#4e342e');
+            grad.addColorStop(0.7, '#2e1c14');
+            grad.addColorStop(1, '#1b120c');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, width, height);
+
+            // Realistic scale speckles
+            for (let i = 0; i < 600; i++) {
+                const rx = Math.random() * width;
+                const ry = Math.random() * height;
+                const rsize = Math.random() * 3.5 + 1;
+                ctx.fillStyle = (Math.random() > 0.5) ? 'rgba(93, 64, 55, 0.75)' : 'rgba(25, 15, 10, 0.85)';
+                ctx.beginPath();
+                ctx.arc(rx, ry, rsize, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Grid lines on uncleaned scale
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+            ctx.lineWidth = 1;
+            const step = 30;
+            for (let x = 0; x < width; x += step) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < height; y += step) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
+            }
+
+            updatePercentage(0);
+        }
+
+        // Pure clean mask erasure - erases rust and reveals the pristine 4k photo beneath
+        function blastDeposit(x, y) {
+            ctx.save();
+            ctx.globalCompositeOperation = 'destination-out';
+            
+            const blastRadius = 38; // Clean comfortable wiping size
+            const radGrad = ctx.createRadialGradient(x, y, 0, x, y, blastRadius);
+            radGrad.addColorStop(0, 'rgba(0, 0, 0, 1)');
+            radGrad.addColorStop(0.85, 'rgba(0, 0, 0, 0.95)');
+            radGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            
+            ctx.fillStyle = radGrad;
+            ctx.beginPath();
+            ctx.arc(x, y, blastRadius, 0, Math.PI * 2);
+            ctx.fill();
+
+            if (lastX && lastY) {
+                ctx.lineWidth = blastRadius * 2;
+                ctx.lineCap = 'round';
+                ctx.strokeStyle = 'rgba(0, 0, 0, 1)';
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(x, y);
+                ctx.stroke();
+            }
+            ctx.restore();
+
+            lastX = x;
+            lastY = y;
+        }
+
+        let calcThrottle = 0;
+        function calculateCleanedPercentage() {
+            calcThrottle++;
+            if (calcThrottle % 6 !== 0) return;
+
+            try {
+                const imgData = ctx.getImageData(0, 0, width, height);
+                const data = imgData.data;
+                let transparentCount = 0;
+                const sampleStep = 16;
+                let sampledTotal = 0;
+
+                for (let i = 3; i < data.length; i += 4 * sampleStep) {
+                    sampledTotal++;
+                    if (data[i] < 120) {
+                        transparentCount++;
+                    }
+                }
+                const pct = Math.min(100, Math.round((transparentCount / sampledTotal) * 100));
+                updatePercentage(pct);
+            } catch (e) {}
+        }
+
+        function updatePercentage(pct) {
+            const el = document.getElementById('cleanPercentText');
+            if (el) el.innerText = pct + '%';
+        }
+
+        function handlePointerMove(e) {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            const x = (clientX - rect.left) * (canvas.width / rect.width);
+            const y = (clientY - rect.top) * (canvas.height / rect.height);
+            blastDeposit(x, y);
+            calculateCleanedPercentage();
+        }
+
+        if (canvas) {
+            canvas.addEventListener('mousemove', handlePointerMove);
+            canvas.addEventListener('touchmove', handlePointerMove, { passive: true });
+            canvas.addEventListener('mouseleave', () => { lastX = 0; lastY = 0; });
+            canvas.addEventListener('touchend', () => { lastX = 0; lastY = 0; });
+        }
+
+        window.resetRustCanvas = function() {
+            initRustLayer();
+        };
+
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('DOMContentLoaded', resizeCanvas);
+        setTimeout(resizeCanvas, 300);
+
+        // 3. Technical Quotation Form Handler (Instant WhatsApp Dispatch)
+        window.submitQuote = function(e) {
+            e.preventDefault();
+            const name = document.getElementById('q-name').value.trim();
+            const phone = document.getElementById('q-phone').value.trim();
+            const location = document.getElementById('q-location').value.trim();
+            const service = document.getElementById('q-service').value;
+            const pressure = document.getElementById('q-pressure').value;
+            const details = document.getElementById('q-details').value.trim();
+
+            const message = `*TECHNICAL QUOTATION REQUEST - VIDARBHA INDUSTRIAL ASSOCIATES*\n` +
+                `----------------------------------------\n` +
+                `*Client / Enterprise:* ${name}\n` +
+                `*Contact Number:* ${phone}\n` +
+                `*Plant Location:* ${location}\n` +
+                `*Requested Service:* ${service}\n` +
+                `*Target Pressure:* ${pressure}\n` +
+                `*Scope & Equipment Details:* ${details}\n` +
+                `----------------------------------------\n` +
+                `_Sent via VIA Official Technical Portal (via-industrial.com)_`;
+
+            const encoded = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/919422837904?text=${encoded}`;
+            window.open(whatsappUrl, '_blank');
+        };
+    </script>
+</body>
+</html>
