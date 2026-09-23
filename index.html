@@ -340,15 +340,15 @@
         <button id="mobileMenuClose" class="absolute top-6 right-6 text-white hover:text-amberbrand text-3xl p-2" aria-label="Close Navigation Menu">
             <i class="fas fa-times"></i>
         </button>
-        <div class="flex items-center gap-3 mb-4">
-            <div class="h-12 w-12 rounded-xl bg-white p-1 shadow-md border-2 border-amberbrand flex items-center justify-center">
+        <a href="#top" class="mobile-link flex items-center gap-3 mb-4 group cursor-pointer" aria-label="Vidarbha Industrial Associates Home">
+            <div class="h-12 w-12 rounded-xl bg-white p-1 shadow-md border-2 border-amberbrand flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
                 <img src="assets/via_logo_badge.png" alt="Official VIA Emblem" class="h-full w-full object-contain" onerror="this.src='Logo.png';">
             </div>
             <div>
-                <span class="font-heading font-black text-xl text-white block leading-tight">VIDARBHA INDUSTRIAL</span>
+                <span class="font-heading font-black text-xl text-white block leading-tight group-hover:text-amberbrand transition">VIDARBHA INDUSTRIAL</span>
                 <span class="text-xs font-mono text-cyanjet font-bold uppercase tracking-widest">Associates • Est. 1997</span>
             </div>
-        </div>
+        </a>
         <a href="#about" class="mobile-link text-lg font-bold uppercase tracking-wider text-slate-200 hover:text-amberbrand py-2 border-b border-white/5">Heritage & Leadership</a>
         <a href="#services" class="mobile-link text-lg font-bold uppercase tracking-wider text-slate-200 hover:text-amberbrand py-2 border-b border-white/5">Specialized Services</a>
         <a href="#equipment" class="mobile-link text-lg font-bold uppercase tracking-wider text-slate-200 hover:text-amberbrand py-2 border-b border-white/5">Fleet (1100 BAR Triplex)</a>
@@ -1340,22 +1340,36 @@
 
     <!-- JAVASCRIPT: Interactive Canvas Simulator, WhatsApp Form & Mobile Navigation -->
     <script>
-        // 1. Mobile Menu Handling
+        // 1. Mobile Navigation Drawer Handling
         const mobileBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileClose = document.getElementById('mobileMenuClose');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        function toggleMenu() {
-            mobileMenu.classList.toggle('-translate-x-full');
+        function openMobileMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('-translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                document.body.classList.add('overflow-hidden');
+            }
         }
 
-        if (mobileBtn) mobileBtn.addEventListener('click', toggleMenu);
-        if (mobileClose) mobileClose.addEventListener('click', toggleMenu);
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
+        function closeMobileMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('translate-x-0');
                 mobileMenu.classList.add('-translate-x-full');
-            });
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        if (mobileBtn) mobileBtn.addEventListener('click', openMobileMenu);
+        if (mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMobileMenu();
         });
 
                         // 2. Interactive Rust-Cleaning Canvas Engine (Clean Plain Erasure, Zero Visual Clutter)
@@ -1559,29 +1573,6 @@
                 setTimeout(() => { form.reset(); successMsg.remove(); }, 5000);
             }
         };
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('mobileMenuBtn');
-            const menu = document.getElementById('mobileMenu');
-            const closeBtn = document.getElementById('mobileMenuClose');
-            const links = menu.querySelectorAll('a');
-            
-            function toggleMenu() {
-                if (menu.classList.contains('-translate-x-full')) {
-                    menu.classList.remove('-translate-x-full');
-                    menu.classList.add('translate-x-0');
-                } else {
-                    menu.classList.remove('translate-x-0');
-                    menu.classList.add('-translate-x-full');
-                }
-            }
-            
-            if (btn) btn.addEventListener('click', toggleMenu);
-            if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
-            links.forEach(l => l.addEventListener('click', toggleMenu));
-        });
     </script>
     
 </body>
