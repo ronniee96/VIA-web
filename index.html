@@ -1296,11 +1296,11 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-phone-alt text-amberbrand"></i>
-                            <span class="font-mono text-cyanjet">+91 9422837904 / 9770215590</span>
+                            <span class="font-mono text-cyanjet"><a href="tel:+919422837904" class="hover:text-white transition">+91 9422837904</a> / <a href="tel:+919770215590" class="hover:text-white transition">9770215590</a></span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-envelope text-amberbrand"></i>
-                            <span class="break-all">vidarbha.industrial.associates@gmail.com</span>
+                            <a href="mailto:vidarbha.industrial.associates@gmail.com" class="break-all hover:text-white transition">vidarbha.industrial.associates@gmail.com</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-shield-alt text-amberbrand"></i>
@@ -1501,27 +1501,63 @@
         // 3. Technical Quotation Form Handler (Instant WhatsApp Dispatch)
         window.submitQuote = function(e) {
             e.preventDefault();
-            const name = document.getElementById('q-name').value.trim();
-            const phone = document.getElementById('q-phone').value.trim();
-            const location = document.getElementById('q-location').value.trim();
-            const service = document.getElementById('q-service').value;
-            const pressure = document.getElementById('q-pressure').value;
-            const details = document.getElementById('q-details').value.trim();
+            const form = e.target;
+            let isValid = true;
+            const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = 'red';
+                    let err = input.nextElementSibling;
+                    if (!err || !err.classList.contains('error-msg')) {
+                        err = document.createElement('div');
+                        err.className = 'error-msg text-red-500 text-xs mt-1';
+                        err.innerText = 'This field is required';
+                        input.parentNode.insertBefore(err, input.nextSibling);
+                    }
+                } else {
+                    input.style.borderColor = '';
+                    let err = input.nextElementSibling;
+                    if (err && err.classList.contains('error-msg')) {
+                        err.remove();
+                    }
+                }
+            });
 
-            const message = `*TECHNICAL QUOTATION REQUEST - VIDARBHA INDUSTRIAL ASSOCIATES*\n` +
-                `----------------------------------------\n` +
-                `*Client / Enterprise:* ${name}\n` +
-                `*Contact Number:* ${phone}\n` +
-                `*Plant Location:* ${location}\n` +
-                `*Requested Service:* ${service}\n` +
-                `*Target Pressure:* ${pressure}\n` +
-                `*Scope & Equipment Details:* ${details}\n` +
-                `----------------------------------------\n` +
-                `_Sent via VIA Official Technical Portal (via-industrial.com)_`;
+            if (isValid) {
+                const name = document.getElementById('q-name').value.trim();
+                const phone = document.getElementById('q-phone').value.trim();
+                const location = document.getElementById('q-location').value.trim();
+                const service = document.getElementById('q-service').value;
+                const pressure = document.getElementById('q-pressure').value;
+                const details = document.getElementById('q-details').value.trim();
 
-            const encoded = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/919422837904?text=${encoded}`;
-            window.open(whatsappUrl, '_blank');
+                const message = `*TECHNICAL QUOTATION REQUEST - VIDARBHA INDUSTRIAL ASSOCIATES*\n` +
+                    `----------------------------------------\n` +
+                    `*Client / Enterprise:* ${name}\n` +
+                    `*Contact Number:* ${phone}\n` +
+                    `*Plant Location:* ${location}\n` +
+                    `*Requested Service:* ${service}\n` +
+                    `*Target Pressure:* ${pressure}\n` +
+                    `*Scope & Equipment Details:* ${details}\n` +
+                    `----------------------------------------\n` +
+                    `_Sent via VIA Official Technical Portal (via-industrial.com)_`;
+
+                const encoded = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/919422837904?text=${encoded}`;
+                window.open(whatsappUrl, '_blank');
+
+                let successMsg = document.getElementById('success-msg');
+                if (!successMsg) {
+                    successMsg = document.createElement('div');
+                    successMsg.id = 'success-msg';
+                    successMsg.className = 'text-green-500 text-sm mt-3 p-2 bg-green-900/30 rounded';
+                    successMsg.innerText = 'Thank you! Your quote request has been received. We will contact you shortly.';
+                    form.appendChild(successMsg);
+                }
+                setTimeout(() => { form.reset(); successMsg.remove(); }, 5000);
+            }
         };
     </script>
 
@@ -1545,50 +1581,6 @@
             if (btn) btn.addEventListener('click', toggleMenu);
             if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
             links.forEach(l => l.addEventListener('click', toggleMenu));
-        });
-    </script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.querySelector('form');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    let isValid = true;
-                    const inputs = form.querySelectorAll('input[required], textarea[required]');
-                    inputs.forEach(input => {
-                        if (!input.value.trim()) {
-                            isValid = false;
-                            input.style.borderColor = 'red';
-                            let err = input.nextElementSibling;
-                            if (!err || !err.classList.contains('error-msg')) {
-                                err = document.createElement('div');
-                                err.className = 'error-msg text-red-500 text-xs mt-1';
-                                err.innerText = 'This field is required';
-                                input.parentNode.insertBefore(err, input.nextSibling);
-                            }
-                        } else {
-                            input.style.borderColor = '';
-                            let err = input.nextElementSibling;
-                            if (err && err.classList.contains('error-msg')) {
-                                err.remove();
-                            }
-                        }
-                    });
-                    
-                    if (isValid) {
-                        let successMsg = document.getElementById('success-msg');
-                        if (!successMsg) {
-                            successMsg = document.createElement('div');
-                            successMsg.id = 'success-msg';
-                            successMsg.className = 'text-green-500 text-sm mt-3 p-2 bg-green-900/30 rounded';
-                            successMsg.innerText = 'Thank you! Your quote request has been received. We will contact you shortly.';
-                            form.appendChild(successMsg);
-                        }
-                        setTimeout(() => { form.reset(); successMsg.remove(); }, 5000);
-                    }
-                });
-            }
         });
     </script>
     
