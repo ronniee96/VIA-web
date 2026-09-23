@@ -261,7 +261,7 @@
         }
     </style>
 </head>
-<body class="bg-slatebg-deep text-slate-100 antialiased selection:bg-amberbrand selection:text-slatebg-deep">
+<body class="bg-slatebg-deep text-slate-100 antialiased selection:bg-amberbrand selection:text-slatebg-deep overflow-x-hidden">
 
             <!-- Top Statutory & Emergency Bar: Single Mathematically Level Row -->
     <header class="bg-slatebg-surface border-b border-white/10 text-[11px] md:text-xs h-10 px-4 md:px-10 z-50 relative text-slate-300 font-mono flex items-center">
@@ -1524,5 +1524,74 @@
             window.open(whatsappUrl, '_blank');
         };
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const closeBtn = document.getElementById('mobileMenuClose');
+            const links = menu.querySelectorAll('a');
+            
+            function toggleMenu() {
+                if (menu.classList.contains('-translate-x-full')) {
+                    menu.classList.remove('-translate-x-full');
+                    menu.classList.add('translate-x-0');
+                } else {
+                    menu.classList.remove('translate-x-0');
+                    menu.classList.add('-translate-x-full');
+                }
+            }
+            
+            if (btn) btn.addEventListener('click', toggleMenu);
+            if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            links.forEach(l => l.addEventListener('click', toggleMenu));
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    let isValid = true;
+                    const inputs = form.querySelectorAll('input[required], textarea[required]');
+                    inputs.forEach(input => {
+                        if (!input.value.trim()) {
+                            isValid = false;
+                            input.style.borderColor = 'red';
+                            let err = input.nextElementSibling;
+                            if (!err || !err.classList.contains('error-msg')) {
+                                err = document.createElement('div');
+                                err.className = 'error-msg text-red-500 text-xs mt-1';
+                                err.innerText = 'This field is required';
+                                input.parentNode.insertBefore(err, input.nextSibling);
+                            }
+                        } else {
+                            input.style.borderColor = '';
+                            let err = input.nextElementSibling;
+                            if (err && err.classList.contains('error-msg')) {
+                                err.remove();
+                            }
+                        }
+                    });
+                    
+                    if (isValid) {
+                        let successMsg = document.getElementById('success-msg');
+                        if (!successMsg) {
+                            successMsg = document.createElement('div');
+                            successMsg.id = 'success-msg';
+                            successMsg.className = 'text-green-500 text-sm mt-3 p-2 bg-green-900/30 rounded';
+                            successMsg.innerText = 'Thank you! Your quote request has been received. We will contact you shortly.';
+                            form.appendChild(successMsg);
+                        }
+                        setTimeout(() => { form.reset(); successMsg.remove(); }, 5000);
+                    }
+                });
+            }
+        });
+    </script>
+    
 </body>
+    
 </html>
