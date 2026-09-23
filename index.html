@@ -264,17 +264,17 @@
 <body class="bg-slatebg-deep text-slate-100 antialiased selection:bg-amberbrand selection:text-slatebg-deep overflow-x-hidden">
 
             <!-- Top Statutory & Emergency Bar: Single Mathematically Level Row -->
-    <header class="bg-slatebg-surface border-b border-white/10 text-[11px] md:text-xs h-10 px-4 md:px-10 z-50 relative text-slate-300 font-mono flex items-center">
-        <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4 overflow-hidden">
+    <header class="bg-slatebg-surface border-b border-white/10 text-[11px] md:text-xs h-10 px-3 sm:px-4 md:px-10 z-50 relative text-slate-300 font-mono flex items-center">
+        <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-2 sm:gap-4 overflow-hidden">
             <!-- Left Info (Single Horizontal Row) -->
-            <div class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0">
+            <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
                 <span class="inline-flex items-center gap-1.5 text-amberbrand font-bold whitespace-nowrap">
                     <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    EST. 1997 • 28+ YEARS
+                    EST. 1997 <span class="hidden xs:inline">• 28+ YRS</span>
                 </span>
                 <span class="text-slate-600">|</span>
                 <span class="text-slate-300 whitespace-nowrap">
-                    <i class="fas fa-map-marker-alt text-amberbrand mr-1"></i> Chandrapur, MH
+                    <i class="fas fa-map-marker-alt text-amberbrand mr-1"></i> Chandrapur
                 </span>
                 <span class="text-slate-600 hidden sm:inline">|</span>
                 <span class="text-slate-300 hidden sm:inline whitespace-nowrap">
@@ -283,8 +283,8 @@
             </div>
 
             <!-- Right Info (Single Horizontal Row) -->
-            <div class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0 ml-auto">
-                <a href="tel:+919422837904" class="text-white hover:text-cyanjet transition font-bold flex items-center gap-1.5 bg-cyanjet/10 hover:bg-cyanjet/20 px-2.5 py-1 rounded-md border border-cyanjet/30 whitespace-nowrap text-[11px]">
+            <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0 ml-auto">
+                <a href="tel:+919422837904" class="text-white hover:text-cyanjet transition font-bold flex items-center gap-1.5 bg-cyanjet/10 hover:bg-cyanjet/20 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md border border-cyanjet/30 whitespace-nowrap text-[10px] sm:text-[11px]">
                     <i class="fas fa-phone-alt text-amberbrand text-[10px]"></i> 24/7: +91 9422837904
                 </a>
                 <span class="text-slate-600 hidden md:inline">|</span>
@@ -300,18 +300,18 @@
     </header>
 
     <!-- Main Navigation Bar -->
-    <nav id="navbar" class="sticky top-0 w-full z-40 bg-slatebg-deep/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 py-3 px-4 md:px-10 flex justify-between items-center">
+    <nav id="navbar" class="sticky top-0 w-full z-40 bg-slatebg-deep/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 py-2.5 sm:py-3 px-3 sm:px-4 md:px-10 flex justify-between items-center">
         <!-- Single Official VIA Emblem Logo (High Contrast Container, Never Camouflaged) -->
-        <a href="#top" class="flex items-center gap-3.5 group cursor-pointer" aria-label="Vidarbha Industrial Associates Home">
-            <div class="h-12 w-12 rounded-xl bg-white p-1 shadow-lg shadow-black/50 border-2 border-amberbrand/70 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+        <a href="#top" class="flex items-center gap-2.5 sm:gap-3.5 group cursor-pointer" aria-label="Vidarbha Industrial Associates Home">
+            <div class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white p-1 shadow-lg shadow-black/50 border-2 border-amberbrand/70 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                 <img src="assets/via_logo_badge.png" alt="Official VIA Emblem" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='Logo.png';">
             </div>
             <div class="flex flex-col">
-                <div class="font-heading font-black text-lg md:text-xl tracking-tight text-white flex items-center gap-1.5 leading-none">
+                <div class="font-heading font-black text-base sm:text-lg md:text-xl tracking-tight text-white flex items-center gap-1 sm:gap-1.5 leading-none">
                     <span>VIDARBHA</span>
                     <span class="text-amberbrand">INDUSTRIAL</span>
                 </div>
-                <span class="text-[10px] uppercase font-mono tracking-widest text-cyanjet font-bold mt-1">Associates • Est. 1997</span>
+                <span class="text-[9px] sm:text-[10px] uppercase font-mono tracking-widest text-cyanjet font-bold mt-1">Associates • Est. 1997</span>
             </div>
         </a>
 
@@ -329,16 +329,16 @@
             </a>
         </div>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" class="lg:hidden text-white hover:text-amberbrand text-2xl focus:outline-none p-2" aria-label="Toggle Navigation Menu">
-            <i class="fas fa-bars"></i>
+        <!-- Mobile Menu Toggle Button (SVG Icon for Instant Reliable Rendering) -->
+        <button id="mobileMenuBtn" class="lg:hidden text-white hover:text-amberbrand focus:outline-none p-1.5 flex items-center justify-center flex-shrink-0 transition" aria-label="Toggle Navigation Menu">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
     </nav>
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="fixed inset-0 z-50 bg-slatebg-deep/98 backdrop-blur-2xl transform -translate-x-full transition-transform duration-300 flex flex-col justify-center px-8 gap-5 lg:hidden">
-        <button id="mobileMenuClose" class="absolute top-6 right-6 text-white hover:text-amberbrand text-3xl p-2" aria-label="Close Navigation Menu">
-            <i class="fas fa-times"></i>
+        <button id="mobileMenuClose" class="absolute top-5 right-5 text-white hover:text-amberbrand p-2 flex items-center justify-center transition" aria-label="Close Navigation Menu">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
         <a href="#top" class="mobile-link flex items-center gap-3 mb-4 group cursor-pointer" aria-label="Vidarbha Industrial Associates Home">
             <div class="h-12 w-12 rounded-xl bg-white p-1 shadow-md border-2 border-amberbrand flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -383,39 +383,38 @@
                 <!-- Left Column: Master Typography & Quick Actions -->
                 <div class="lg:col-span-7 space-y-6">
                     <!-- Badge -->
-                    <div class="inline-flex items-center gap-2.5 bg-slatebg-surface/90 border border-amberbrand/40 px-4 py-2 rounded-full shadow-lg">
-                        <span class="flex h-2.5 w-2.5 relative">
+                    <div class="inline-flex items-center gap-2 sm:gap-2.5 bg-slatebg-surface/90 border border-amberbrand/40 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg max-w-full">
+                        <span class="flex h-2 w-2 sm:h-2.5 sm:w-2.5 relative flex-shrink-0">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amberbrand opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amberbrand"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-amberbrand"></span>
                         </span>
-                        <span class="text-xs font-mono font-bold tracking-wider text-amber-300 uppercase">
-                            SINCE 1997 • CHANDRAPUR, MAHARASHTRA • 0–1100 BAR
+                        <span class="text-[10px] sm:text-xs font-mono font-bold tracking-wider text-amber-300 uppercase truncate">
+                            SINCE 1997 • CHANDRAPUR, MH • 0–1100 BAR
                         </span>
                     </div>
 
-                    <!-- Main Title: Flawlessly Aligned, Big, High-Contrast -->
-                                        <!-- Main Title: Perfectly Structured 2-Line Heading -->
-                    <h1 class="font-heading font-black text-3xl sm:text-5xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-[1.15]">
+                    <!-- Main Title: Perfectly Structured 2-Line Heading -->
+                    <h1 class="font-heading font-black text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white tracking-tight leading-[1.15] break-words">
                         <span class="block">Engineered for the <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanjet via-sky-300 to-blue-400 drop-shadow-[0_0_20px_rgba(0,240,255,0.4)]">Pressure.</span></span>
                         <span class="block mt-1 sm:mt-2">Trusted for the <span class="text-transparent bg-clip-text bg-gradient-to-r from-amberbrand via-yellow-300 to-amber-500 drop-shadow-[0_0_20px_rgba(245,158,11,0.4)]">Job.</span></span>
                     </h1>
 
                     <!-- Subtitle -->
-                    <p class="text-base sm:text-lg lg:text-xl text-slate-200 font-normal leading-relaxed max-w-2xl">
+                    <p class="text-sm sm:text-base lg:text-lg text-slate-200 font-normal leading-relaxed max-w-2xl">
                         India’s heavy-duty hydro-jetting and chemical cleaning enterprise. Delivering <strong class="text-white font-bold">0–1100 BAR</strong> ultra-high pressure scale purging, boiler turnarounds, and surface condenser restoration across India's largest thermal, steel, cement, and chemical facilities.
                     </p>
 
                     <!-- CTAs Bar: Instant Visibility Above the Fold -->
-                    <div class="pt-2 flex flex-wrap gap-4 items-center">
-                        <a href="#quote" class="bg-gradient-to-r from-amberbrand via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-slatebg-deep px-8 py-4 rounded-full font-black text-sm sm:text-base transition transform hover:scale-105 shadow-[0_0_25px_rgba(245,158,11,0.4)] flex items-center gap-2.5">
-                            <i class="fab fa-whatsapp text-xl text-slatebg-deep"></i>
+                    <div class="pt-2 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 items-stretch sm:items-center">
+                        <a href="#quote" class="w-full sm:w-auto justify-center bg-gradient-to-r from-amberbrand via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-slatebg-deep px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-black text-sm sm:text-base transition transform hover:scale-105 shadow-[0_0_25px_rgba(245,158,11,0.4)] flex items-center gap-2.5">
+                            <i class="fab fa-whatsapp text-lg sm:text-xl text-slatebg-deep"></i>
                             <span>Request Instant Technical Quote</span>
                         </a>
-                        <a href="tel:+919422837904" class="glass-panel hover:border-cyanjet text-white hover:text-cyanjet px-6 py-4 rounded-full font-bold text-sm sm:text-base transition flex items-center gap-2 shadow-lg">
+                        <a href="tel:+919422837904" class="w-full sm:w-auto justify-center glass-panel hover:border-cyanjet text-white hover:text-cyanjet px-5 sm:px-6 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-base transition flex items-center gap-2 shadow-lg">
                             <i class="fas fa-phone-alt text-cyanjet"></i>
                             <span>24/7 Dispatch: +91 9422837904</span>
                         </a>
-                        <a href="#equipment" class="text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white transition flex items-center gap-1.5 ml-2">
+                        <a href="#equipment" class="text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white transition flex items-center justify-center sm:justify-start gap-1.5 py-1 sm:ml-2">
                             <span>View 1100 BAR Fleet</span>
                             <i class="fas fa-arrow-right text-amberbrand text-xs"></i>
                         </a>
