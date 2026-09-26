@@ -2,3 +2,12 @@
 *.zip
 .vscode/
 .idea/
+node_modules/
+.agents/skills/
+.autohand/
+.bob/
+.claude/
+.kimchi/
+data/
+neon.ts
+skills-lock.json

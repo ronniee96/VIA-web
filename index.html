@@ -587,7 +587,7 @@
                                     <span class="text-cyanjet font-black">180 LPM</span> <span class="text-slate-400 text-xs sm:text-sm font-semibold">@ 0 BAR (STANDBY)</span>
                                 </div>
                             </div>
-                            <button onclick="resetRustCanvas()" class="bg-white/10 hover:bg-amberbrand hover:text-slatebg-deep text-slate-200 border border-white/20 px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider transition flex items-center gap-2">
+                            <button type="button" onclick="resetRustCanvas()" aria-label="Reset Surface Blast Simulator Scale" class="bg-white/10 hover:bg-amberbrand hover:text-slatebg-deep text-slate-200 border border-white/20 px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amberbrand">
                                 <i class="fas fa-redo-alt"></i> Reset Scale
                             </button>
                         </div>
@@ -1328,29 +1328,35 @@
                     </div>
                 </div>
 
-                <!-- Right Form: High Contrast, Crisp Inputs -->
+                <!-- Right Form: High Contrast, Crisp Inputs & DPDP Consent -->
                 <div class="lg:col-span-6 bg-slatebg-card p-6 md:p-8 rounded-2xl border border-white/15 shadow-2xl">
                     <form onsubmit="submitQuote(event)" class="space-y-4">
+                        <!-- Data Protection Notice -->
+                        <div class="flex items-center gap-2 text-[11px] text-slate-300 font-mono bg-white/5 p-2.5 rounded-xl border border-white/10">
+                            <i class="fas fa-shield-alt text-cyanjet text-sm"></i>
+                            <span><strong>Data Confidentiality:</strong> Project parameters collected solely for quotation &amp; mobilization under DPDP Act 2023. Zero marketing spam.</span>
+                        </div>
+
                         <div>
                             <label for="q-name" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Company / Enterprise Name *</label>
-                            <input type="text" id="q-name" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" placeholder="Your Company Name" required>
+                            <input type="text" id="q-name" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-2 focus:ring-amberbrand/40 focus:outline-none transition text-sm" placeholder="Your Company Name" required>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label for="q-phone" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Phone Number *</label>
-                                <input type="tel" id="q-phone" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" placeholder="+91 98XXX XXXXX" required>
+                                <input type="tel" id="q-phone" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-2 focus:ring-amberbrand/40 focus:outline-none transition text-sm" placeholder="+91 98XXX XXXXX" required>
                             </div>
                             <div>
                                 <label for="q-location" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Plant Site Location *</label>
-                                <input type="text" id="q-location" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" placeholder="e.g., Chandrapur, Nagpur, Raipur" required>
+                                <input type="text" id="q-location" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-2 focus:ring-amberbrand/40 focus:outline-none transition text-sm" placeholder="e.g., Chandrapur, Nagpur, Raipur" required>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label for="q-service" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Required Service *</label>
-                                <select id="q-service" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" required>
+                                <select id="q-service" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-2 focus:ring-amberbrand/40 focus:outline-none transition text-sm" required>
                                     <option value="" disabled selected>Select Primary Service</option>
                                     <option value="Hydrojet Cleaning (150-1100 Bar)">Hydrojet Cleaning (150-1100 Bar)</option>
                                     <option value="Boiler & Condenser Descaling">Boiler & Condenser Descaling</option>
@@ -1363,7 +1369,7 @@
                             </div>
                             <div>
                                 <label for="q-pressure" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Target Pressure Tier</label>
-                                <select id="q-pressure" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm">
+                                <select id="q-pressure" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-2 focus:ring-amberbrand/40 focus:outline-none transition text-sm">
                                     <option value="Auto-Assess by Engineer" selected>Auto-Assess by Engineer</option>
                                     <option value="150 - 400 BAR (Light/Medium Deposit)">150 - 400 BAR (Light/Medium Deposit)</option>
                                     <option value="600 - 800 BAR (Heavy Scale & Ash)">600 - 800 BAR (Heavy Scale & Ash)</option>
@@ -1374,12 +1380,25 @@
 
                         <div>
                             <label for="q-details" class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Scope / Tube Count / Equipment Details *</label>
-                            <textarea id="q-details" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-1 focus:ring-amberbrand outline-none transition text-sm" rows="3" placeholder="e.g., 210 MW Surface Condenser, ~7,000 SS304 tubes, severe silica scaling..." required></textarea>
+                            <textarea id="q-details" class="w-full bg-slatebg-deep border border-slate-700 text-white px-4 py-3 rounded-xl focus:border-amberbrand focus:ring-2 focus:ring-amberbrand/40 focus:outline-none transition text-sm" rows="3" placeholder="e.g., 210 MW Surface Condenser, ~7,000 SS304 tubes, severe silica scaling..." required></textarea>
                         </div>
 
-                        <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white py-4 rounded-xl font-bold text-base transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-[0_0_25px_rgba(16,185,129,0.4)]">
+                        <!-- Form Consent Checkbox (DPDP Act & Terms) -->
+                        <div class="pt-1">
+                            <label for="q-consent" class="flex items-start gap-3 cursor-pointer group">
+                                <input type="checkbox" id="q-consent" required class="mt-0.5 h-4 w-4 rounded border-slate-700 bg-slatebg-deep text-amberbrand focus:ring-2 focus:ring-amberbrand focus:outline-none flex-shrink-0 cursor-pointer">
+                                <span class="text-xs text-slate-300 leading-relaxed select-none">
+                                    I confirm I am an authorized enterprise representative and agree to the <button type="button" onclick="openLegalModal('terms')" class="text-amberbrand underline hover:text-white transition font-medium">Terms &amp; Conditions</button> and consent to data processing under the <button type="button" onclick="openLegalModal('privacy')" class="text-amberbrand underline hover:text-white transition font-medium">Privacy Policy</button>. *
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white py-4 rounded-xl font-bold text-base transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-[0_0_25px_rgba(16,185,129,0.4)] focus:outline-none focus:ring-2 focus:ring-emerald-400">
                             <i class="fab fa-whatsapp text-2xl"></i> Dispatch to WhatsApp (+91 9422837904)
                         </button>
+
+                        <!-- Static Success Message Container for DOM & Accessibility -->
+                        <div id="success-msg" class="hidden" role="alert" aria-live="polite"></div>
                     </form>
                 </div>
 
@@ -1387,15 +1406,15 @@
         </div>
     </section>
 
-    <!-- FOOTER: Single Authentic Logo, Registered Office & Quick Links -->
+    <!-- FOOTER: Single Authentic Logo, Registered Office, Legal Policies & Quick Links -->
     <footer class="bg-slatebg-deep pt-20 pb-16 border-t border-white/10 relative z-20 text-slate-400">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-16">
                 <!-- Col 1: Brand & Bio -->
-                <div class="md:col-span-5 space-y-4">
+                <div class="lg:col-span-4 space-y-4">
                     <div class="flex items-center gap-3.5 mb-2">
                         <div class="h-12 w-12 rounded-xl bg-white p-1 shadow-md border-2 border-amberbrand flex items-center justify-center">
-                            <img src="assets/via_logo_badge.png" alt="Official VIA Logo" class="h-full w-full object-contain" onerror="this.src='Logo.png';">
+                            <img src="assets/via_logo_badge.png" alt="Official VIA Logo" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='Logo.png';">
                         </div>
                         <div>
                             <span class="font-heading font-black text-xl text-white tracking-tight leading-none block">VIDARBHA INDUSTRIAL</span>
@@ -1411,15 +1430,15 @@
                 </div>
 
                 <!-- Col 2: Registered Office -->
-                <div class="md:col-span-4 space-y-4">
-                    <h4 class="text-white font-bold text-base tracking-wide border-b border-white/10 pb-2">Registered Office & Yard</h4>
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-white font-bold text-base tracking-wide border-b border-white/10 pb-2">Registered Office &amp; Yard</h4>
                     <ul class="space-y-3 text-slate-300 text-sm">
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-amberbrand mt-1"></i>
+                            <i class="fas fa-map-marker-alt text-amberbrand mt-1 flex-shrink-0"></i>
                             <span>Maya Decoration, Nr Durga Mata Mandir,<br>Bye Pass Road, Bengali Camp Market,<br>Chandrapur - 442401, Maharashtra, India</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-phone-alt text-amberbrand mt-1"></i>
+                            <i class="fas fa-phone-alt text-amberbrand mt-1 flex-shrink-0"></i>
                             <div class="text-sm font-sans flex flex-wrap items-center gap-1.5 text-cyanjet">
                                 <a href="tel:+919422837904" class="hover:text-white transition font-semibold" title="Primary Dispatch Line">+91 9422837904</a>
                                 <span class="text-slate-500">/</span>
@@ -1429,36 +1448,88 @@
                             </div>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-amberbrand"></i>
-                            <a href="mailto:vidarbha.industrial.associates@gmail.com" class="whitespace-nowrap hover:text-white transition">vidarbha.industrial.associates@gmail.com</a>
+                            <i class="fas fa-envelope text-amberbrand flex-shrink-0"></i>
+                            <a href="mailto:vidarbha.industrial.associates@gmail.com" class="whitespace-nowrap hover:text-white transition text-xs sm:text-sm">vidarbha.industrial.associates@gmail.com</a>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fas fa-shield-alt text-amberbrand"></i>
+                            <i class="fas fa-shield-alt text-amberbrand flex-shrink-0"></i>
                             <span class="text-xs font-mono">GSTIN: 27AHTPM2150M1ZU • MSME: MH-08-0024043</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Col 3: Quick Navigation -->
-                <div class="md:col-span-3 space-y-4">
-                    <h4 class="text-white font-bold text-base tracking-wide border-b border-white/10 pb-2">Quick Navigation</h4>
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="text-white font-bold text-base tracking-wide border-b border-white/10 pb-2">Navigation</h4>
                     <ul class="space-y-2 text-sm text-slate-400">
-                        <li><a href="#about" class="hover:text-amberbrand transition">Heritage & Leadership</a></li>
+                        <li><a href="#about" class="hover:text-amberbrand transition">Heritage &amp; Leadership</a></li>
                         <li><a href="#services" class="hover:text-amberbrand transition">Specialized Services</a></li>
                         <li><a href="#equipment" class="hover:text-amberbrand transition">15 Advanced Machines</a></li>
-                        <li><a href="#operations" class="hover:text-amberbrand transition">On-Site Operations Gallery</a></li>
+                        <li><a href="#operations" class="hover:text-amberbrand transition">Operations Gallery</a></li>
                         <li><a href="#case-study" class="hover:text-amberbrand transition">Turnaround Case Studies</a></li>
                         <li><a href="#compliance" class="hover:text-amberbrand transition">Statutory Compliance</a></li>
-                        <li><a href="#quote" class="hover:text-amberbrand transition">Request Instant Quotation</a></li>
+                        <li><a href="#quote" class="hover:text-amberbrand transition">Request Quotation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Legal & Statutory Compliance -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-white font-bold text-base tracking-wide border-b border-white/10 pb-2">Legal &amp; Compliance</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li>
+                            <button type="button" onclick="openLegalModal('privacy')" class="hover:text-cyanjet transition flex items-center gap-2 text-left">
+                                <i class="fas fa-user-shield text-xs text-cyanjet"></i> Privacy Policy (DPDP 2023)
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="openLegalModal('terms')" class="hover:text-cyanjet transition flex items-center gap-2 text-left">
+                                <i class="fas fa-file-contract text-xs text-amberbrand"></i> Terms &amp; Conditions
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="openLegalModal('cookies')" class="hover:text-cyanjet transition flex items-center gap-2 text-left">
+                                <i class="fas fa-cookie-bite text-xs text-yellow-400"></i> Cookie Policy
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="openLegalModal('refund')" class="hover:text-cyanjet transition flex items-center gap-2 text-left">
+                                <i class="fas fa-undo-alt text-xs text-emerald-400"></i> Refund &amp; Quality Guarantee
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="openLegalModal('statutory')" class="hover:text-cyanjet transition flex items-center gap-2 text-left">
+                                <i class="fas fa-gavel text-xs text-purple-400"></i> Business Details &amp; Jurisdiction
+                            </button>
+                        </li>
+                        <li class="pt-1">
+                            <a href="legal.html" class="text-xs font-mono text-cyanjet hover:underline inline-flex items-center gap-1.5 font-bold">
+                                <span>Complete Legal Repository</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-slate-500">
-                <div>&copy; 1997–2026 Vidarbha Industrial Associates. All rights reserved.</div>
-                <div class="flex gap-4">
-                    <a href="#top" class="hover:text-cyanjet transition">Back to Top &uarr;</a>
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-slate-400">
+                <div>&copy; 1997–2026 Vidarbha Industrial Associates. All rights reserved. • Chandrapur, Maharashtra</div>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <button type="button" onclick="openLegalModal('privacy')" class="hover:text-white transition">Privacy</button>
+                    <span>•</span>
+                    <button type="button" onclick="openLegalModal('terms')" class="hover:text-white transition">Terms</button>
+                    <span>•</span>
+                    <button type="button" onclick="openLegalModal('cookies')" class="hover:text-white transition">Cookies</button>
+                    <span>•</span>
+                    <button type="button" onclick="openLegalModal('refund')" class="hover:text-white transition">Refunds</button>
+                    <span>•</span>
+                    <a href="legal.html" class="hover:text-white transition">Full Legal Docs</a>
+                    <span>•</span>
+                    <a href="#top" class="text-cyanjet hover:text-white transition font-bold">Top &uarr;</a>
                 </div>
+            </div>
+            <div class="pt-4 text-[11px] font-mono text-slate-500 text-center md:text-left flex flex-col sm:flex-row justify-between items-center gap-2 border-t border-white/5 mt-4">
+                <span>Governing Law: Republic of India • Exclusive Jurisdiction: Courts of Chandrapur / Nagpur Bench (Bombay High Court)</span>
+                <span>All on-site equipment photographs and schematics are proprietary intellectual property.</span>
             </div>
         </div>
     </footer>
@@ -1467,6 +1538,176 @@
     <a href="https://wa.me/919422837904?text=Hello%20Vidarbha%20Industrial%20Associates,%20I%20would%20like%20to%20inquire%20about%20industrial%20hydro-jetting%20services." target="_blank" rel="noopener noreferrer" class="fixed bottom-8 right-8 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white h-16 w-16 rounded-full shadow-[0_0_25px_rgba(37,211,102,0.5)] flex items-center justify-center text-3xl hover:scale-105 transition-all duration-300" aria-label="Contact VIA Directly on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- FLOATING COOKIE & PRIVACY CONSENT BANNER (DPDP 2023 Compliant) -->
+    <div id="cookieConsentBanner" class="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-md z-50 bg-slatebg-card/95 backdrop-blur-md border border-cyanjet/40 p-4 sm:p-5 rounded-2xl shadow-[0_0_35px_rgba(0,0,0,0.85)] text-xs text-slate-200 hidden transition-all duration-500" role="region" aria-label="Cookie and Privacy Consent">
+        <div class="flex items-start gap-3">
+            <div class="h-9 w-9 rounded-xl bg-amberbrand/15 border border-amberbrand/30 text-amberbrand flex items-center justify-center text-lg flex-shrink-0 mt-0.5">
+                <i class="fas fa-cookie-bite"></i>
+            </div>
+            <div class="space-y-2 flex-1">
+                <div class="font-heading font-bold text-white text-sm flex items-center justify-between">
+                    <span>Privacy &amp; Cookie Notice</span>
+                    <span class="text-[9px] font-mono text-cyanjet uppercase tracking-wider bg-cyanjet/10 px-1.5 py-0.5 rounded border border-cyanjet/20">DPDP 2023</span>
+                </div>
+                <p class="text-slate-300 text-[11px] leading-relaxed">
+                    We use necessary cookies &amp; browser local storage to save your engineering simulation preferences. We do <strong>not</strong> use advertising trackers or sell your information.
+                </p>
+                <div class="flex flex-wrap items-center gap-2 pt-1">
+                    <button type="button" onclick="handleCookieConsent('all')" class="bg-gradient-to-r from-amberbrand to-amber-500 hover:from-amber-400 hover:to-amber-600 text-slatebg-deep font-bold px-3 py-1.5 rounded-lg text-xs transition shadow cursor-pointer focus:ring-2 focus:ring-amberbrand">
+                        Accept All
+                    </button>
+                    <button type="button" onclick="handleCookieConsent('essential')" class="bg-white/10 hover:bg-white/20 text-white font-medium px-3 py-1.5 rounded-lg text-xs transition border border-white/10 cursor-pointer">
+                        Essential Only
+                    </button>
+                    <button type="button" onclick="openLegalModal('cookies')" class="text-cyanjet hover:underline text-xs ml-auto cursor-pointer">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACCESSIBLE LEGAL POLICIES MODAL DIALOG -->
+    <div id="legalModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+        <div class="bg-slatebg-card border border-white/20 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-fade-in">
+            <!-- Modal Header -->
+            <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between bg-slatebg-surface flex-shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="h-9 w-9 rounded-lg bg-amberbrand/10 border border-amberbrand/30 flex items-center justify-center text-amberbrand">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div>
+                        <h3 id="legalModalTitle" class="text-base sm:text-lg font-bold font-heading text-white">Legal Policies &amp; Statutory Compliance</h3>
+                        <p class="text-[11px] font-mono text-slate-400">Vidarbha Industrial Associates • Official Governance</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="legal.html" target="_blank" class="text-xs font-mono text-cyanjet hover:underline hidden sm:inline-flex items-center gap-1 mr-2" title="Open complete legal document in standalone page">
+                        Full Page <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                    <button type="button" onclick="closeLegalModal()" class="text-slate-400 hover:text-white p-2 rounded-lg hover:bg-white/10 transition cursor-pointer" aria-label="Close Legal Policies Modal">
+                        <i class="fas fa-times text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="flex border-b border-white/10 bg-slatebg-deep/70 px-4 gap-1 sm:gap-2 overflow-x-auto text-xs font-mono py-2 flex-shrink-0">
+                <button type="button" onclick="switchLegalTab('privacy')" id="tab-btn-privacy" class="legal-tab-btn py-2 px-3 rounded-lg font-bold text-slate-300 hover:text-white transition whitespace-nowrap cursor-pointer">
+                    1. Privacy Policy
+                </button>
+                <button type="button" onclick="switchLegalTab('terms')" id="tab-btn-terms" class="legal-tab-btn py-2 px-3 rounded-lg font-bold text-slate-300 hover:text-white transition whitespace-nowrap cursor-pointer">
+                    2. Terms &amp; Conditions
+                </button>
+                <button type="button" onclick="switchLegalTab('cookies')" id="tab-btn-cookies" class="legal-tab-btn py-2 px-3 rounded-lg font-bold text-slate-300 hover:text-white transition whitespace-nowrap cursor-pointer">
+                    3. Cookie Policy
+                </button>
+                <button type="button" onclick="switchLegalTab('refund')" id="tab-btn-refund" class="legal-tab-btn py-2 px-3 rounded-lg font-bold text-slate-300 hover:text-white transition whitespace-nowrap cursor-pointer">
+                    4. Refund &amp; Quality
+                </button>
+                <button type="button" onclick="switchLegalTab('statutory')" id="tab-btn-statutory" class="legal-tab-btn py-2 px-3 rounded-lg font-bold text-slate-300 hover:text-white transition whitespace-nowrap cursor-pointer">
+                    5. Business &amp; Laws
+                </button>
+            </div>
+
+            <!-- Modal Content (Scrollable) -->
+            <div class="p-5 sm:p-6 overflow-y-auto text-xs sm:text-sm text-slate-300 space-y-4 leading-relaxed font-light flex-1">
+                <!-- Privacy Tab -->
+                <div id="tab-content-privacy" class="legal-tab-content space-y-3">
+                    <div class="flex items-center gap-2 text-cyanjet font-mono font-bold text-xs uppercase">
+                        <i class="fas fa-shield-alt"></i> Digital Personal Data Protection Act, 2023 &amp; IT Act 2000
+                    </div>
+                    <h4 class="text-white font-bold text-base font-heading">Data Collection &amp; Confidentiality</h4>
+                    <p>
+                        Vidarbha Industrial Associates collects technical plant specifications (plant name, contact phone, equipment dimensions, tube counts, scale type) solely to evaluate engineering feasibility, calculate hydro-jetting pressure tiers (150–1100 BAR), and formulate formal commercial quotations.
+                    </p>
+                    <p>
+                        We never sell, rent, or trade client project data to advertising brokers or marketing entities. All submissions through this portal are processed under strict commercial non-disclosure and protected with 256-bit TLS encryption.
+                    </p>
+                    <h5 class="text-white font-semibold text-xs uppercase font-mono text-amberbrand pt-1">Data Retention &amp; Rights</h5>
+                    <p>
+                        Technical quotation records are archived strictly for statutory accounting and audited tax compliance. Authorized enterprise representatives may request summary access, correction, or deletion by emailing our Grievance Officer at <a href="mailto:vidarbha.industrial.associates@gmail.com" class="text-cyanjet underline">vidarbha.industrial.associates@gmail.com</a>.
+                    </p>
+                </div>
+
+                <!-- Terms Tab -->
+                <div id="tab-content-terms" class="legal-tab-content hidden space-y-3">
+                    <div class="flex items-center gap-2 text-amberbrand font-mono font-bold text-xs uppercase">
+                        <i class="fas fa-file-contract"></i> Industrial Service Engagement &amp; Mobilization Terms
+                    </div>
+                    <h4 class="text-white font-bold text-base font-heading">Contractual Terms &amp; Plant Clearances</h4>
+                    <p>
+                        Online quotation requests represent technical estimates subject to engineering review by Managing Director P.C. Mitra. Final binding execution requires formal client Purchase Order (PO) issuance and mutually executed Work Orders.
+                    </p>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-300">
+                        <li><strong>Permits:</strong> Client plant must furnish valid Permit-to-Work (PTW), Confined Space Entry permits, and LOTO isolation prior to pump energization.</li>
+                        <li><strong>Site Utilities:</strong> Client provides required water volume (40–180 LPM) and power connection points.</li>
+                        <li><strong>Statutory Safety:</strong> VIA crews deploy with certified ballistic Kevlar armor and safety foot valves compliant with the Factories Act and Workman's Compensation.</li>
+                    </ul>
+                </div>
+
+                <!-- Cookies Tab -->
+                <div id="tab-content-cookies" class="legal-tab-content hidden space-y-3">
+                    <div class="flex items-center gap-2 text-yellow-400 font-mono font-bold text-xs uppercase">
+                        <i class="fas fa-cookie-bite"></i> Essential Technical Cookies &amp; Local Storage
+                    </div>
+                    <h4 class="text-white font-bold text-base font-heading">Zero Ad-Tracking Policy</h4>
+                    <p>
+                        This website utilizes only essential technical cookies and browser local storage (<code class="text-cyanjet bg-black/40 px-1 py-0.5 rounded">via_cookie_consent</code> and <code class="text-cyanjet bg-black/40 px-1 py-0.5 rounded">via_sim_state</code>) to remember your cookie preferences and interactive blast simulator state.
+                    </p>
+                    <p>
+                        We do <strong>not</strong> load Google Ads pixels, Meta tracking cookies, or cross-site fingerprinting scripts. You may clear local storage at any time via your browser preferences.
+                    </p>
+                </div>
+
+                <!-- Refund Tab -->
+                <div id="tab-content-refund" class="legal-tab-content hidden space-y-3">
+                    <div class="flex items-center gap-2 text-emerald-400 font-mono font-bold text-xs uppercase">
+                        <i class="fas fa-undo-alt"></i> Quality Guarantee &amp; Mobilization Terms
+                    </div>
+                    <h4 class="text-white font-bold text-base font-heading">Cleanliness Guarantee ("Done Right")</h4>
+                    <p>
+                        We guarantee that all contracted hydro-jetting and chemical descaling reaches contracted cleanliness standards. If joint endoscopy inspection indicates residual scale attributable to our process, <strong>we re-clean without additional service labor charge</strong> until passing inspection.
+                    </p>
+                    <p>
+                        For scheduled shutdowns, advance mobilization fees cover specialized freight and pump transit from our Chandrapur yard. Cancellation after rig transit incurs actual transport and crew demurrage costs.
+                    </p>
+                </div>
+
+                <!-- Statutory Tab -->
+                <div id="tab-content-statutory" class="legal-tab-content hidden space-y-3">
+                    <div class="flex items-center gap-2 text-purple-400 font-mono font-bold text-xs uppercase">
+                        <i class="fas fa-gavel"></i> Business Registrations &amp; Applicable Laws
+                    </div>
+                    <h4 class="text-white font-bold text-base font-heading">Verified Business Identity &amp; Jurisdiction</h4>
+                    <div class="bg-white/5 p-3 rounded-xl border border-white/10 font-mono text-xs space-y-1">
+                        <div><strong class="text-amberbrand">Commercial Entity:</strong> Vidarbha Industrial Associates (Est. 1997)</div>
+                        <div><strong class="text-amberbrand">GSTIN:</strong> 27AHTPM2150M1ZU (Govt of India Form GST REG-06 Verified)</div>
+                        <div><strong class="text-amberbrand">MSME Registration:</strong> MH-08-0024043</div>
+                        <div><strong class="text-amberbrand">Registered Address:</strong> Maya Decoration, Nr Durga Mata Mandir, Bye Pass Road, Bengali Camp Market, Chandrapur - 442401, Maharashtra, India</div>
+                        <div><strong class="text-amberbrand">Leadership:</strong> Mr. P. C. Mitra, Founder &amp; Managing Director</div>
+                    </div>
+                    <p class="pt-1">
+                        <strong>Governing Law:</strong> Republic of India. All contractual and digital engagements are subject to the exclusive jurisdiction of the competent courts of Chandrapur, Maharashtra or the Bombay High Court (Nagpur Bench).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 border-t border-white/10 bg-slatebg-surface flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-mono flex-shrink-0">
+                <span class="text-slate-400 text-center sm:text-left">
+                    GSTIN: 27AHTPM2150M1ZU • Jurisdiction: Chandrapur / Nagpur, Maharashtra
+                </span>
+                <div class="flex items-center gap-3">
+                    <a href="legal.html" class="text-cyanjet hover:underline font-bold">View Full Document Page &rarr;</a>
+                    <button type="button" onclick="closeLegalModal()" class="bg-white/10 hover:bg-white/20 text-white px-4 py-1.5 rounded-lg transition font-semibold cursor-pointer">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JAVASCRIPT: Interactive Canvas Simulator, WhatsApp Form & Mobile Navigation -->
     <script>
@@ -1739,7 +1980,7 @@
         window.addEventListener('DOMContentLoaded', resizeCanvas);
         setTimeout(resizeCanvas, 300);
 
-        // 3. Technical Quotation Form Handler (Instant WhatsApp Dispatch)
+        // 3. Technical Quotation Form Handler (Instant WhatsApp Dispatch with Consent Verification)
         window.submitQuote = function(e) {
             e.preventDefault();
             const form = e.target;
@@ -1747,14 +1988,21 @@
             const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
             
             inputs.forEach(input => {
-                if (!input.value.trim()) {
+                let isFieldValid = true;
+                if (input.type === 'checkbox') {
+                    isFieldValid = input.checked;
+                } else {
+                    isFieldValid = !!input.value.trim();
+                }
+
+                if (!isFieldValid) {
                     isValid = false;
-                    input.style.borderColor = 'red';
+                    input.style.borderColor = '#ef4444';
                     let err = input.nextElementSibling;
                     if (!err || !err.classList.contains('error-msg')) {
                         err = document.createElement('div');
-                        err.className = 'error-msg text-red-500 text-xs mt-1';
-                        err.innerText = 'This field is required';
+                        err.className = 'error-msg text-red-400 text-xs mt-1 font-mono';
+                        err.innerText = input.type === 'checkbox' ? 'Consent required to proceed' : 'This field is required';
                         input.parentNode.insertBefore(err, input.nextSibling);
                     }
                 } else {
@@ -1782,6 +2030,7 @@
                     `*Requested Service:* ${service}\n` +
                     `*Target Pressure:* ${pressure}\n` +
                     `*Scope & Equipment Details:* ${details}\n` +
+                    `*Consent Verified:* Yes (Terms & Privacy Accepted)\n` +
                     `----------------------------------------\n` +
                     `_Sent via VIA Official Technical Portal (via-industrial.com)_`;
 
@@ -1790,16 +2039,94 @@
                 window.open(whatsappUrl, '_blank');
 
                 let successMsg = document.getElementById('success-msg');
-                if (!successMsg) {
-                    successMsg = document.createElement('div');
-                    successMsg.id = 'success-msg';
-                    successMsg.className = 'text-green-500 text-sm mt-3 p-2 bg-green-900/30 rounded';
-                    successMsg.innerText = 'Thank you! Your quote request has been received. We will contact you shortly.';
-                    form.appendChild(successMsg);
+                if (successMsg) {
+                    successMsg.className = 'text-green-400 text-xs sm:text-sm mt-3 p-3 bg-green-950/40 border border-green-500/30 rounded-xl flex items-center gap-2.5 font-sans';
+                    successMsg.innerHTML = '<i class="fas fa-check-circle text-emerald-400 text-base flex-shrink-0"></i><span>Quotation specifications compiled and dispatched to WhatsApp (+91 9422837904). We will review and confirm mobilization within 2 hours.</span>';
+                    successMsg.classList.remove('hidden');
                 }
-                setTimeout(() => { form.reset(); successMsg.remove(); }, 5000);
+                setTimeout(() => { 
+                    form.reset(); 
+                    if (successMsg) successMsg.classList.add('hidden'); 
+                }, 7000);
             }
         };
+
+        // 4. Cookie Consent Banner Handling
+        function initCookieConsent() {
+            const consent = localStorage.getItem('via_cookie_consent');
+            const banner = document.getElementById('cookieConsentBanner');
+            if (!consent && banner) {
+                setTimeout(() => {
+                    banner.classList.remove('hidden');
+                }, 1200);
+            }
+        }
+
+        window.handleCookieConsent = function(level) {
+            localStorage.setItem('via_cookie_consent', level);
+            const banner = document.getElementById('cookieConsentBanner');
+            if (banner) {
+                banner.classList.add('hidden');
+            }
+        };
+
+        // 5. Legal Policies Modal Dialog
+        window.openLegalModal = function(tabName) {
+            const modal = document.getElementById('legalModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+                switchLegalTab(tabName || 'privacy');
+            }
+        };
+
+        window.closeLegalModal = function() {
+            const modal = document.getElementById('legalModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        };
+
+        window.switchLegalTab = function(tabId) {
+            const tabs = ['privacy', 'terms', 'cookies', 'refund', 'statutory'];
+            tabs.forEach(t => {
+                const btn = document.getElementById('tab-btn-' + t);
+                const content = document.getElementById('tab-content-' + t);
+                if (t === tabId) {
+                    if (btn) {
+                        btn.className = 'legal-tab-btn py-2 px-3 rounded-lg font-bold bg-amberbrand text-slatebg-deep transition whitespace-nowrap cursor-pointer shadow-md';
+                    }
+                    if (content) content.classList.remove('hidden');
+                } else {
+                    if (btn) {
+                        btn.className = 'legal-tab-btn py-2 px-3 rounded-lg font-bold text-slate-300 hover:text-white transition whitespace-nowrap cursor-pointer hover:bg-white/5';
+                    }
+                    if (content) content.classList.add('hidden');
+                }
+            });
+        };
+
+        // Modal event listeners (Escape key & backdrop click)
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLegalModal();
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('legalModal');
+            if (modal && !modal.classList.contains('hidden') && e.target === modal) {
+                closeLegalModal();
+            }
+        });
+
+        // Initialize Cookie Consent on page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCookieConsent);
+        } else {
+            initCookieConsent();
+        }
     </script>
     
 </body>
