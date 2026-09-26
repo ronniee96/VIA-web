@@ -2355,53 +2355,62 @@
 
                 if (channel === 'email') {
                     // Formal RFQ Quotation Letter Template for Executive / Procurement Inquiries
+                    const refId = 'VIA-RFQ-' + Math.floor(100000 + Math.random() * 900000);
+                    const now = new Date();
+                    const dateStr = now.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+                    const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true });
+
                     const subject = `[OFFICIAL RFQ] Technical Quotation Request: ${service} - ${name} (${location})`;
                     const letterBody = 
 `================================================================================
-VIDARBHA INDUSTRIAL ASSOCIATES (VIA) - FORMAL RFQ & QUOTATION REQUEST
-High-Pressure Hydrojetting & Industrial Descaling Engineering Services
-Corporate Website : https://via-industrial.com
-Official Emblem   : https://via-industrial.com/Logo.png
-Direct Inquiries  : vidarbha.industrial.associates@gmail.com | +91 94228 37904
+VIDARBHA INDUSTRIAL ASSOCIATES (VIA)
+HIGH-PRESSURE HYDROJETTING & INDUSTRIAL PLANT TURNAROUND SERVICES
+Corporate Portal : https://via-industrial.com
+Official Emblem  : https://via-industrial.com/Logo.png
+Registered Desk  : vidarbha.industrial.associates@gmail.com | +91 94228 37904
 ================================================================================
 
-To: The Engineering & Mobilization Desk
-    Vidarbha Industrial Associates
+FORMAL REQUEST FOR TECHNICAL QUOTATION (RFQ)
+Reference No     : ${refId}
+Date of Request  : ${dateStr} at ${timeStr} (IST)
 
-Dear Sir / Madam,
+TO:
+Vidarbha Industrial Associates
+Attn: P.C. Mitra (Managing Director) & Technical Mobilization Desk
+Email: vidarbha.industrial.associates@gmail.com
 
-We hereby submit an official request for technical quotation, mobilization 
-feasibility, and turnaround execution proposal for high-pressure hydrojetting / 
-industrial cleaning services as specified below:
-
---------------------------------------------------------------------------------
-1. CLIENT & FACILITY SPECIFICATIONS
---------------------------------------------------------------------------------
-Enterprise / Company Name  : ${name}
-Authorized Contact Phone   : ${phone}
-Plant Site / Unit Location : ${location}
+FROM (CLIENT / ENTERPRISE SPECIFICATIONS):
+Enterprise Name  : ${name}
+Authorized Phone : ${phone}
+Plant Location   : ${location}
 
 --------------------------------------------------------------------------------
-2. TECHNICAL SCOPE & OPERATING PARAMETERS
+1. TECHNICAL SCOPE & OPERATING SPECIFICATIONS
 --------------------------------------------------------------------------------
-Primary Required Service   : ${service}
-Target Pressure Tier       : ${pressure}
-Scope & Equipment Details  : ${details}
+Primary Service  : ${service}
+Pressure Tier    : ${pressure}
+Scope & Details  :
+${details}
 
 --------------------------------------------------------------------------------
-3. COMPLIANCE, SECURITY & GOVERNANCE
+2. COMPLIANCE & AUTHORIZATION
 --------------------------------------------------------------------------------
-Regulatory Framework       : Digital Personal Data Protection (DPDP) Act 2023
-Terms & Privacy Status     : Authorized Enterprise Representative Consent Verified
-Submission Timestamp       : ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST
+* Data Protection: Confirmed under Digital Personal Data Protection (DPDP) Act 2023
+* Terms & Privacy: Authorized enterprise consent verified
+* Safety Protocols: ISO 9001 / 45001 & ASME Plant Protocols Enforced
 
-================================================================================
-Please provide an official itemized quotation, safety risk assessment, equipment 
-allocation schedule, and mobilization lead-time on VIA corporate letterhead.
+--------------------------------------------------------------------------------
+3. REQUESTED COMMERCIAL DELIVERABLES
+--------------------------------------------------------------------------------
+Please review and issue on official VIA corporate letterhead:
+1. Detailed Technical & Commercial Scope Quotation
+2. Mobilization & Turnaround Execution Lead Time
+3. 1100 BAR Hydrojet Rig & Certified Operator Dossier
+4. Site Safety Matrix & Water / Electric Hookup Requirements
 
 Yours faithfully,
 ${name}
-Authorized Engineering / Procurement Desk
+Plant Operations & Procurement Desk
 `;
 
                     const recipient = 'vidarbha.industrial.associates@gmail.com';
@@ -2419,8 +2428,25 @@ Authorized Engineering / Procurement Desk
                     }
 
                     if (successMsg) {
-                        successMsg.className = 'text-sky-300 text-xs sm:text-sm mt-3 p-3.5 bg-sky-950/60 border border-sky-400/40 rounded-xl flex items-center gap-3 font-sans shadow-lg';
-                        successMsg.innerHTML = '<i class="fas fa-envelope-circle-check text-cyanjet text-lg flex-shrink-0"></i><div><strong class="block text-white">Formal RFQ Quotation Letter Generated</strong><span>Official quotation letter opened in Gmail addressed to Vidarbha Industrial Associates. Our engineering desk will review your scope and provide a formal proposal.</span></div>';
+                        window._lastRfqLetter = letterBody;
+                        successMsg.className = 'text-sky-300 text-xs sm:text-sm mt-3 p-4 bg-sky-950/70 border border-sky-400/40 rounded-xl space-y-2 font-sans shadow-lg';
+                        successMsg.innerHTML = `
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-envelope-circle-check text-cyanjet text-xl flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="block text-white text-sm">Formal RFQ Quotation Letter Dispatched via Gmail</strong>
+                                    <span class="text-xs text-slate-300">Quotation letter addressed to <strong>vidarbha.industrial.associates@gmail.com</strong> has opened in Gmail.</span>
+                                </div>
+                            </div>
+                            <div class="pt-2 flex flex-wrap gap-2 text-xs">
+                                <a href="${gmailComposeUrl}" target="_blank" class="bg-cyanjet hover:bg-cyan-300 text-slatebg-deep px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1.5">
+                                    <i class="fas fa-external-link-alt"></i> Re-open in Gmail
+                                </a>
+                                <button type="button" onclick="navigator.clipboard.writeText(window._lastRfqLetter); this.innerText='✓ Copied to Clipboard!';" class="bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg font-mono transition flex items-center gap-1.5 border border-white/20">
+                                    <i class="far fa-copy"></i> Copy Letter Text
+                                </button>
+                            </div>
+                        `;
                         successMsg.classList.remove('hidden');
                     }
                 } else {
