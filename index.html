@@ -388,12 +388,12 @@
                 <!-- Left Column: Master Typography & Quick Actions -->
                 <div class="lg:col-span-7 space-y-6">
                     <!-- Badge -->
-                    <div class="inline-flex items-center gap-2 sm:gap-2.5 bg-slatebg-surface/90 border border-amberbrand/40 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg max-w-full">
+                    <div class="inline-flex items-center gap-2 sm:gap-2.5 bg-slatebg-surface/90 border border-amberbrand/40 px-3.5 sm:px-4.5 py-1.5 sm:py-2 rounded-full shadow-lg max-w-full">
                         <span class="flex h-2 w-2 sm:h-2.5 sm:w-2.5 relative flex-shrink-0">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amberbrand opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-amberbrand"></span>
                         </span>
-                        <span class="text-[10px] sm:text-[11px] font-mono font-bold tracking-wider text-amber-300 uppercase truncate">
+                        <span class="text-xs sm:text-sm font-heading font-bold tracking-wide text-amber-400 uppercase truncate">
                             SINCE 1997 • CHANDRAPUR, MH • 0–1100 BAR
                         </span>
                     </div>
@@ -448,14 +448,14 @@
                         <!-- HUD Header -->
                         <div class="flex justify-between items-center pb-4 border-b border-white/10 mb-5 relative z-10">
                             <div>
-                                <span class="text-[11px] font-mono text-cyanjet font-bold tracking-widest uppercase block">1100 BAR HYDRO-JET SIMULATOR</span>
+                                <span class="text-xs font-heading text-cyanjet font-bold tracking-wider uppercase block">1100 BAR HYDRO-JET SIMULATOR</span>
                                 <h3 class="font-heading font-black text-white text-lg md:text-xl flex items-center gap-2.5">
                                     <i class="fas fa-crosshairs text-cyanjet"></i> Tube Scale Cleanser
                                 </h3>
                             </div>
                             <div class="text-right">
-                                <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold bg-cyanjet/10 text-cyanjet border border-cyanjet/30 px-2.5 py-1 rounded-full">
-                                    <span class="h-2 w-2 rounded-full bg-cyanjet animate-ping"></span> 16,000 PSI ACTIVE
+                                <span id="pressureBadge" class="inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-white/10 text-slate-300 border border-white/20 px-3 py-1 rounded-full transition-all duration-300">
+                                    <span id="pressureDot" class="h-2 w-2 rounded-full bg-cyanjet"></span> <span id="pressureBadgeText">16,000 PSI READY</span>
                                 </span>
                             </div>
                         </div>
@@ -469,25 +469,27 @@
                             <canvas id="cleanCanvas" class="relative z-10"></canvas>
 
                             <!-- Minimal Subtle Hint at Bottom -->
-                            <div class="absolute bottom-2.5 left-3 z-20 pointer-events-none bg-slatebg-deep/85 border border-white/15 px-3 py-1 rounded-lg text-xs font-mono text-slate-300 flex items-center gap-2 shadow-lg">
+                            <div class="absolute bottom-2.5 left-3 z-20 pointer-events-none bg-slatebg-deep/90 border border-white/15 px-3 py-1.5 rounded-lg text-xs font-sans font-medium text-slate-200 flex items-center gap-2 shadow-lg">
                                 <i class="fas fa-hand-pointer text-amberbrand"></i>
                                 <span>Move cursor to clean rust &amp; reveal equipment</span>
                             </div>
                         </div>
 
                         <!-- HUD Metrics Bar -->
-                        <div class="mt-5 pt-4 flex flex-wrap items-center justify-between gap-4 text-sm font-mono relative z-10">
+                        <div class="mt-5 pt-4 flex flex-wrap items-center justify-between gap-4 relative z-10">
                             <div>
-                                <span class="text-slate-400 block text-[10px]">TUBE SCALE REMOVAL:</span>
-                                <span id="cleanPercentText" class="text-lg font-black text-amberbrand">0%</span>
-                                <span class="text-slate-400 text-[11px]"> / 100% Target</span>
+                                <span class="text-slate-300 block text-xs font-semibold uppercase tracking-wider mb-0.5">TUBE SCALE REMOVAL:</span>
+                                <span id="cleanPercentText" class="text-xl sm:text-2xl font-black text-amberbrand font-heading">0%</span>
+                                <span class="text-slate-400 text-xs font-medium"> / 100% Target</span>
                             </div>
                             <div>
-                                <span class="text-slate-400 block text-[10px]">WATER FLOW:</span>
-                                <span class="text-cyanjet font-bold text-sm">60 LPM @ 1100 BAR</span>
+                                <span class="text-slate-300 block text-xs font-semibold uppercase tracking-wider mb-0.5">WATER FLOW &amp; PRESSURE:</span>
+                                <div id="flowRateText" class="text-cyanjet font-heading font-black text-base sm:text-lg tracking-wide">
+                                    <span class="text-cyanjet font-black">180 LPM</span> <span class="text-slate-400 text-xs sm:text-sm font-semibold">@ 0 BAR (STANDBY)</span>
+                                </div>
                             </div>
-                            <button onclick="resetRustCanvas()" class="bg-white/10 hover:bg-amberbrand hover:text-slatebg-deep text-slate-200 border border-white/20 px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition">
-                                <i class="fas fa-redo-alt mr-1"></i> Reset Scale
+                            <button onclick="resetRustCanvas()" class="bg-white/10 hover:bg-amberbrand hover:text-slatebg-deep text-slate-200 border border-white/20 px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider transition flex items-center gap-2">
+                                <i class="fas fa-redo-alt"></i> Reset Scale
                             </button>
                         </div>
                     </div>
@@ -500,36 +502,44 @@
     <section class="py-16 bg-slatebg-surface border-b border-white/10 relative z-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="p-6 rounded-2xl bg-slatebg-card border border-white/10">
-                    <div class="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyanjet to-sky-300 font-heading">
-                        1,100 <span class="text-2xl sm:text-3xl md:text-4xl text-cyanjet">BAR</span>
+                <div class="p-6 rounded-2xl bg-slatebg-card border border-white/10 flex flex-col items-center justify-between min-h-[190px] sm:min-h-[210px]">
+                    <div class="h-20 sm:h-24 flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyanjet to-sky-300 font-heading leading-tight">
+                        1,100 <span class="block text-2xl sm:text-3xl md:text-4xl text-cyanjet font-heading">BAR</span>
                     </div>
-                    <div class="text-[10px] uppercase tracking-wider text-slate-300 font-bold mt-2">Ultra-High Jetting Peak</div>
-                    <p class="text-[10px] text-slate-400 mt-1.5 font-mono">Triplex Plunger Technology</p>
+                    <div class="text-center">
+                        <div class="text-xs uppercase tracking-wider text-slate-200 font-bold mt-2">Ultra-High Jetting Peak</div>
+                        <p class="text-xs text-slate-400 mt-1 font-sans">Triplex Plunger Technology</p>
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slatebg-card border border-white/10">
-                    <div class="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amberbrand to-yellow-300 font-heading">
-                        29+ <span class="text-2xl sm:text-3xl md:text-4xl text-amberbrand">Years</span>
+                <div class="p-6 rounded-2xl bg-slatebg-card border border-white/10 flex flex-col items-center justify-between min-h-[190px] sm:min-h-[210px]">
+                    <div class="h-20 sm:h-24 flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amberbrand to-yellow-300 font-heading leading-tight">
+                        29+ <span class="block text-2xl sm:text-3xl md:text-4xl text-amberbrand font-heading">Years</span>
                     </div>
-                    <div class="text-[10px] uppercase tracking-wider text-slate-300 font-bold mt-2">Continuous Execution</div>
-                    <p class="text-[10px] text-slate-400 mt-1.5 font-mono">Serving Since 1997</p>
+                    <div class="text-center">
+                        <div class="text-xs uppercase tracking-wider text-slate-200 font-bold mt-2">Continuous Execution</div>
+                        <p class="text-xs text-slate-400 mt-1 font-sans">Serving Since 1997</p>
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slatebg-card border border-white/10">
-                    <div class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-heading">
-                        15 <span class="text-2xl sm:text-3xl md:text-4xl text-cyanjet">Units</span>
+                <div class="p-6 rounded-2xl bg-slatebg-card border border-white/10 flex flex-col items-center justify-between min-h-[190px] sm:min-h-[210px]">
+                    <div class="h-20 sm:h-24 flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl font-black text-white font-heading leading-tight">
+                        15 <span class="block text-2xl sm:text-3xl md:text-4xl text-cyanjet font-heading">Units</span>
                     </div>
-                    <div class="text-[10px] uppercase tracking-wider text-slate-300 font-bold mt-2">Specialized Machine Fleet</div>
-                    <p class="text-[10px] text-slate-400 mt-1.5 font-mono">Trailers, Trolleys & Skids</p>
+                    <div class="text-center">
+                        <div class="text-xs uppercase tracking-wider text-slate-200 font-bold mt-2">Specialized Machine Fleet</div>
+                        <p class="text-xs text-slate-400 mt-1 font-sans">Trailers, Trolleys &amp; Skids</p>
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slatebg-card border border-white/10">
-                    <div class="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 font-heading">
+                <div class="p-6 rounded-2xl bg-slatebg-card border border-white/10 flex flex-col items-center justify-between min-h-[190px] sm:min-h-[210px]">
+                    <div class="h-20 sm:h-24 flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 font-heading leading-tight">
                         100%
                     </div>
-                    <div class="text-[10px] uppercase tracking-wider text-slate-300 font-bold mt-2">Turnaround Safety Record</div>
-                    <p class="text-[10px] text-slate-400 mt-1.5 font-mono">Zero Lost-Time Injuries</p>
+                    <div class="text-center">
+                        <div class="text-xs uppercase tracking-wider text-slate-200 font-bold mt-2">Turnaround Safety Record</div>
+                        <p class="text-xs text-slate-400 mt-1 font-sans">Zero Lost-Time Injuries</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -540,7 +550,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <!-- Left Info -->
             <div class="lg:col-span-7 space-y-8">
-                <span class="tech-chip gold-chip">Engineering Heritage • Chandrapur Hub</span>
+                <span class="tech-chip gold-chip text-[10px] sm:text-xs text-center sm:text-left max-w-full leading-relaxed">Generations of Industrial Maintenance • Chandrapur Heritage • Serving Pan-India</span>
                 <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[.9] tracking-tight">
                     29 Years of Heavy Industrial Cleaning Mastery
                 </h2>
@@ -1464,9 +1474,17 @@
         }
 
         let calcThrottle = 0;
+        let currentPct = 0;
+        let currentFlow = 180;
+        let currentBar = 0;
+        let targetBar = 0;
+        let isActivelyBlasting = false;
+        let blastTimeout = null;
+        let isCompleted = false;
+
         function calculateCleanedPercentage() {
             calcThrottle++;
-            if (calcThrottle % 6 !== 0) return;
+            if (calcThrottle % 4 !== 0) return;
 
             try {
                 const imgData = ctx.getImageData(0, 0, width, height);
@@ -1487,8 +1505,14 @@
         }
 
         function updatePercentage(pct) {
+            currentPct = pct;
             const el = document.getElementById('cleanPercentText');
             if (el) el.innerText = pct + '%';
+
+            if (pct >= 98) {
+                isCompleted = true;
+                targetBar = 0; // Water pressure decreases when rust is clear
+            }
         }
 
         function handlePointerMove(e) {
@@ -1499,16 +1523,99 @@
             const y = (clientY - rect.top) * (canvas.height / rect.height);
             blastDeposit(x, y);
             calculateCleanedPercentage();
+
+            // Moving the cursor increases water pressure dynamically
+            if (!isCompleted) {
+                isActivelyBlasting = true;
+                targetBar = 1100;
+                clearTimeout(blastTimeout);
+                blastTimeout = setTimeout(() => {
+                    isActivelyBlasting = false;
+                    if (!isCompleted) targetBar = 0; // Return to standby pressure when idle
+                }, 350);
+            }
         }
+
+        // Live telemetry loop: pressure surge + gradual flow drop from 180 LPM to 60 LPM
+        function renderTelemetry() {
+            // Smoothly animate pressure (BAR)
+            const barDiff = targetBar - currentBar;
+            if (Math.abs(barDiff) > 1) {
+                currentBar += barDiff * 0.18;
+            } else {
+                currentBar = targetBar;
+            }
+
+            // Gradual flow drop: 180 LPM down to 60 LPM as rust clears
+            const targetFlow = Math.round(180 - (currentPct / 100) * (180 - 60));
+            const flowDiff = targetFlow - currentFlow;
+            if (Math.abs(flowDiff) > 0.5) {
+                currentFlow += flowDiff * 0.12;
+            } else {
+                currentFlow = targetFlow;
+            }
+
+            const dispBar = Math.round(currentBar);
+            const dispFlow = Math.round(currentFlow);
+
+            const flowEl = document.getElementById('flowRateText');
+            const badgeEl = document.getElementById('pressureBadge');
+            const badgeTextEl = document.getElementById('pressureBadgeText');
+            const dotEl = document.getElementById('pressureDot');
+
+            if (flowEl) {
+                if (isCompleted || currentPct >= 98) {
+                    flowEl.innerHTML = `<span class="text-emerald-400 font-black">${dispFlow} LPM</span> <span class="text-slate-300 text-xs sm:text-sm font-semibold">@ ${dispBar} BAR</span> <span class="text-emerald-400 text-xs font-bold sm:ml-1">(CLEAN COMPLETE)</span>`;
+                } else if (dispBar > 60) {
+                    flowEl.innerHTML = `<span class="text-cyanjet font-black">${dispFlow} LPM</span> <span class="text-slate-300 text-xs sm:text-sm font-semibold">@</span> <span class="text-amber-400 font-black">${dispBar} BAR</span>`;
+                } else {
+                    flowEl.innerHTML = `<span class="text-cyanjet font-black">${dispFlow} LPM</span> <span class="text-slate-400 text-xs sm:text-sm font-semibold">@ ${dispBar} BAR (STANDBY)</span>`;
+                }
+            }
+
+            if (badgeTextEl && badgeEl) {
+                if (isCompleted || currentPct >= 98) {
+                    badgeTextEl.innerText = 'PURGE RESTORED';
+                    badgeEl.className = 'inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-3 py-1 rounded-full transition-colors duration-300';
+                    if (dotEl) dotEl.className = 'h-2 w-2 rounded-full bg-emerald-400';
+                } else if (dispBar > 60) {
+                    const psi = Math.round(dispBar * 14.5038);
+                    badgeTextEl.innerText = `${psi.toLocaleString()} PSI ACTIVE`;
+                    badgeEl.className = 'inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-cyanjet/20 text-cyanjet border border-cyanjet/40 px-3 py-1 rounded-full transition-colors duration-300';
+                    if (dotEl) dotEl.className = 'h-2 w-2 rounded-full bg-cyanjet animate-ping';
+                } else {
+                    badgeTextEl.innerText = '16,000 PSI READY';
+                    badgeEl.className = 'inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-white/10 text-slate-300 border border-white/20 px-3 py-1 rounded-full transition-colors duration-300';
+                    if (dotEl) dotEl.className = 'h-2 w-2 rounded-full bg-cyanjet';
+                }
+            }
+
+            requestAnimationFrame(renderTelemetry);
+        }
+        requestAnimationFrame(renderTelemetry);
 
         if (canvas) {
             canvas.addEventListener('mousemove', handlePointerMove);
             canvas.addEventListener('touchmove', handlePointerMove, { passive: true });
-            canvas.addEventListener('mouseleave', () => { lastX = 0; lastY = 0; });
-            canvas.addEventListener('touchend', () => { lastX = 0; lastY = 0; });
+            canvas.addEventListener('mouseleave', () => { 
+                lastX = 0; lastY = 0; 
+                isActivelyBlasting = false;
+                if (!isCompleted) targetBar = 0;
+            });
+            canvas.addEventListener('touchend', () => { 
+                lastX = 0; lastY = 0; 
+                isActivelyBlasting = false;
+                if (!isCompleted) targetBar = 0;
+            });
         }
 
         window.resetRustCanvas = function() {
+            currentPct = 0;
+            currentFlow = 180;
+            currentBar = 0;
+            targetBar = 0;
+            isCompleted = false;
+            isActivelyBlasting = false;
             initRustLayer();
         };
 
