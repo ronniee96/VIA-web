@@ -395,6 +395,23 @@
             transform: translateX(2px);
         }
 
+        /* Pyramid Layout Chips for Certified Standards */
+        .pyramid-chip {
+            background: #0d1527;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 0.875rem;
+            padding: 0.65rem 1.15rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .pyramid-chip:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 240, 255, 0.15);
+        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 9px;
@@ -515,7 +532,7 @@
     </div>
 
     <!-- HERO SECTION: Perfectly Aligned Headline, High Contrast Visuals & Interactive Cleaning Simulator -->
-    <section id="top" class="relative overflow-hidden pt-12 pb-24 md:py-28 border-b border-white/10 industrial-grid">
+    <section id="top" class="relative overflow-hidden pt-6 pb-20 md:pt-10 md:pb-24 border-b border-white/10 industrial-grid">
         <!-- Background Ambient Video & 4K AI Fallback -->
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <div class="absolute inset-0 bg-cover bg-center opacity-40 filter brightness-90" style="background-image: url('assets/hero_plant.jpg');"></div>
@@ -529,35 +546,6 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 relative z-10">
-            <!-- Advanced Technical Engineering Telemetry Banner (PressureJet & WOMA Triplex Powered) -->
-            <div class="mb-8 p-3.5 sm:p-4 rounded-2xl bg-slatebg-surface/85 border border-white/10 backdrop-blur-md shadow-2xl flex flex-wrap items-center justify-between gap-3.5">
-                <div class="flex items-center gap-3">
-                    <span class="flex h-3 w-3 relative flex-shrink-0">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyanjet opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-cyanjet"></span>
-                    </span>
-                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-                        <span class="text-xs font-mono font-bold text-white tracking-wide uppercase">
-                            <span class="text-cyanjet">TRIPLEX PRESSURE JET FLEET:</span> 15 HEAVY UNITS MOBILIZED
-                        </span>
-                        <span class="text-[11px] font-mono text-slate-400 hidden md:inline">
-                            (PressureJet &amp; WOMA Class Triplex Plungers • 150–1100 BAR / 16,000 PSI)
-                        </span>
-                    </div>
-                </div>
-                <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
-                    <span class="px-2.5 py-1 rounded-md bg-amberbrand/10 border border-amberbrand/30 text-amberbrand font-bold flex items-center gap-1.5 shadow-sm">
-                        <i class="fas fa-bolt text-[10px]"></i> Mach 1.5 (~500 m/s)
-                    </span>
-                    <span class="hidden sm:inline-flex px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300 font-medium items-center gap-1.5">
-                        <i class="fas fa-shield-alt text-emerald-400 text-[10px]"></i> 1600 BAR Tested Hoses
-                    </span>
-                    <span class="px-2.5 py-1 rounded-md bg-cyanjet/10 border border-cyanjet/30 text-cyanjet font-bold flex items-center gap-1.5 shadow-sm">
-                        <i class="fas fa-clock text-[10px]"></i> 24/7 Outage Dispatch
-                    </span>
-                </div>
-            </div>
-
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Left Column: Master Typography & Quick Actions -->
@@ -572,9 +560,6 @@
                             <span class="text-xs sm:text-sm font-heading font-bold tracking-wide text-amber-400 uppercase">
                                 SINCE 1997 • CHANDRAPUR, MH • 0–1100 BAR
                             </span>
-                        </div>
-                        <div class="inline-flex items-center gap-1.5 bg-cyanjet/10 border border-cyanjet/30 px-3 py-1.5 rounded-full shadow-sm text-xs font-mono font-bold text-cyanjet">
-                            <i class="fas fa-microchip text-[11px]"></i> PressureJet &amp; WOMA Rig Fleet
                         </div>
                     </div>
 
@@ -1084,110 +1069,6 @@
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Verified Safety & Rigging Hardware Matrix (12 Trust Badges with Glowing Hover Effects) -->
-                <div>
-                    <h4 class="text-xs uppercase font-heading font-bold tracking-wider text-slate-300 mb-3 flex items-center gap-2">
-                        <i class="fas fa-shield-alt text-amberbrand"></i> Certified Rigging, Safety Hardware &amp; Operational Standards
-                    </h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs font-mono">
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-amberbrand/60 hover:shadow-[0_0_20px_rgba(245,158,11,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-shield-alt text-amberbrand text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">Dual Foot Dump Valves</span>
-                                <span class="text-[9px] text-slate-400">&lt; 0.2s Bypass Dump</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-cyanjet/60 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-check-circle text-cyanjet text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">Welkin 1600 BAR Hoses</span>
-                                <span class="text-[9px] text-slate-400">2.5:1 Safety Burst Factor</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-amberbrand/60 hover:shadow-[0_0_20px_rgba(245,158,11,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-bolt text-amberbrand text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">Flameproof (FLP) Switchgears</span>
-                                <span class="text-[9px] text-slate-400">Ex d IIB T4 PESO Certified</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-cyanjet/60 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-link text-cyanjet text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">Hose Whip-Check Socks</span>
-                                <span class="text-[9px] text-slate-400">Heavy Stainless Wire-Mesh</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-amberbrand/60 hover:shadow-[0_0_20px_rgba(245,158,11,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-gem text-amberbrand text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">StoneAge Rotary Nozzles</span>
-                                <span class="text-[9px] text-slate-400">Sapphire &amp; Carbide Inserts</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-cyanjet/60 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-fire-extinguisher text-cyanjet text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">Calibrated Rupture Discs</span>
-                                <span class="text-[9px] text-slate-400">1150 BAR Fail-Safe Burst</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-amberbrand/60 hover:shadow-[0_0_20px_rgba(245,158,11,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-user-shield text-amberbrand text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">Ballistic Dyneema Armor</span>
-                                <span class="text-[9px] text-slate-400">TST 2000 BAR Operator PPE</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-cyanjet/60 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-filter text-cyanjet text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">50μ Dual Water Filters</span>
-                                <span class="text-[9px] text-slate-400">Zero Nozzle / Plunger Scoring</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-amberbrand/60 hover:shadow-[0_0_20px_rgba(245,158,11,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-cogs text-amberbrand text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">Solid Ceramic Plungers</span>
-                                <span class="text-[9px] text-slate-400">Zero Thermal Galling</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-cyanjet/60 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-cube text-cyanjet text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">17-4PH Forged Heads</span>
-                                <span class="text-[9px] text-slate-400">Fatigue-Proof Manifolds</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-amberbrand/60 hover:shadow-[0_0_20px_rgba(245,158,11,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-eye text-amberbrand text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">Two-Man Safety Rule</span>
-                                <span class="text-[9px] text-slate-400">Dedicated Deadman Marshal</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slatebg-card hover:bg-white/5 border border-white/10 hover:border-cyanjet/60 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)] transition-all duration-300 p-2.5 rounded-xl flex items-center gap-2.5 text-slate-200 group cursor-default">
-                            <i class="fas fa-certificate text-cyanjet text-sm group-hover:scale-110 transition-transform flex-shrink-0"></i>
-                            <div>
-                                <span class="text-white font-bold block text-[11px]">Annual UT / Hydro Testing</span>
-                                <span class="text-[9px] text-slate-400">Level II NDT Documented</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Right Visual: Triplex Pump Head 3D Render & Mobile Unit -->
@@ -1240,72 +1121,74 @@
             </div>
         </div>
 
-        <!-- 4-Card Comprehensive Hydro-Jetting Technical Architecture Grid -->
-        <div class="mt-16 pt-12 border-t border-white/10">
-            <div class="mb-8 text-center max-w-3xl mx-auto">
-                <span class="tech-chip">Engineering Standards &amp; Physics</span>
-                <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-3">
-                    The Science of Ultra-High-Pressure (UHP) Hydro-Blasting
+        <!-- Essential Certified Safety & Hardware Standards (Clean 3-2-1 Pyramid Layout) -->
+        <div class="mt-14 pt-10 border-t border-white/10 text-center">
+            <div class="mb-8">
+                <span class="tech-chip">Safety &amp; Operational Governance</span>
+                <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-2">
+                    Certified Rigging &amp; Operator Safeguards
                 </h3>
-                <p class="text-slate-400 text-xs sm:text-sm mt-2">
-                    How Vidarbha Industrial Associates achieves 100% tube cleanliness without metallurgical wall thinning or pitting damage.
+                <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-xl mx-auto">
+                    The non-negotiable safety protocols enforced across every industrial turnaround.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-slatebg-card p-5 rounded-2xl border border-white/10 hover:border-cyanjet/50 hover:shadow-[0_0_25px_rgba(0,240,255,0.2)] transition-all duration-300 space-y-3 group">
-                    <div class="h-10 w-10 rounded-xl bg-cyanjet/10 border border-cyanjet/30 text-cyanjet flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
-                        <i class="fas fa-water"></i>
+            <!-- Pyramid Structure: Tier 1 (3 items) -> Tier 2 (2 items) -> Tier 3 (1 item) -->
+            <div class="max-w-4xl mx-auto flex flex-col items-center gap-3">
+                <!-- Tier 1: 3 Foundation Hardware Controls -->
+                <div class="flex flex-wrap justify-center gap-3 w-full">
+                    <div class="pyramid-chip border-amberbrand/40 hover:border-amberbrand">
+                        <i class="fas fa-shield-alt text-amberbrand text-base"></i>
+                        <div class="text-left">
+                            <span class="text-white font-bold text-xs block">Dual Foot Dump Valves</span>
+                            <span class="text-[10px] text-slate-400 font-mono">&lt; 0.2s Instant Bypass Depressurization</span>
+                        </div>
                     </div>
-                    <h4 class="text-white font-bold text-sm font-heading group-hover:text-cyanjet transition-colors">Mach 1.5 Supersonic Stream</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed font-light">
-                        Pressurized to 1100 BAR, water exits sapphire micro-orifices at supersonic velocities (~500 m/s). The kinetic cavitation shockwave pulverizes glass-hard silica, calcium carbonate, and iron oxide scale instantly.
-                    </p>
-                    <div class="text-[10px] font-mono text-cyanjet/80 pt-1 border-t border-white/5">
-                        • Zero chemical residues<br>• Zero abrasive grit contamination
+
+                    <div class="pyramid-chip border-cyanjet/40 hover:border-cyanjet">
+                        <i class="fas fa-check-circle text-cyanjet text-base"></i>
+                        <div class="text-left">
+                            <span class="text-white font-bold text-xs block">Welkin 1600 BAR Hoses</span>
+                            <span class="text-[10px] text-slate-400 font-mono">Multi-Spiral with Steel Whip-Check Socks</span>
+                        </div>
+                    </div>
+
+                    <div class="pyramid-chip border-amberbrand/40 hover:border-amberbrand">
+                        <i class="fas fa-bolt text-amberbrand text-base"></i>
+                        <div class="text-left">
+                            <span class="text-white font-bold text-xs block">Flameproof (FLP) Switchgears</span>
+                            <span class="text-[10px] text-slate-400 font-mono">Ex-d IIB T4 Certified for Hazardous Gas Zones</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-slatebg-card p-5 rounded-2xl border border-white/10 hover:border-amberbrand/50 hover:shadow-[0_0_25px_rgba(245,158,11,0.2)] transition-all duration-300 space-y-3 group">
-                    <div class="h-10 w-10 rounded-xl bg-amberbrand/10 border border-amberbrand/30 text-amberbrand flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
-                        <i class="fas fa-sync-alt"></i>
+                <!-- Tier 2: 2 Advanced PPE & Tooling Standards -->
+                <div class="flex flex-wrap justify-center gap-3 w-full">
+                    <div class="pyramid-chip border-cyanjet/40 hover:border-cyanjet">
+                        <i class="fas fa-user-shield text-cyanjet text-base"></i>
+                        <div class="text-left">
+                            <span class="text-white font-bold text-xs block">TST Sweden 2000 BAR Armor</span>
+                            <span class="text-[10px] text-slate-400 font-mono">Full Ballistic Dyneema Body &amp; Gaiter Protection</span>
+                        </div>
                     </div>
-                    <h4 class="text-white font-bold text-sm font-heading group-hover:text-amberbrand transition-colors">StoneAge Rotary Tooling</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed font-light">
-                        Self-rotating Banshee, Badger, and BJV toolheads spin at 3,000–6,000 RPM. Forward-angled cutting jets disintegrate plugs, while rearward reaction ports provide powerful self-propulsion through complex tube bends.
-                    </p>
-                    <div class="text-[10px] font-mono text-amberbrand/80 pt-1 border-t border-white/5">
-                        • Full 360° circumferential sweep<br>• NACE / SSPC visual cleanliness
+
+                    <div class="pyramid-chip border-amberbrand/40 hover:border-amberbrand">
+                        <i class="fas fa-gem text-amberbrand text-base"></i>
+                        <div class="text-left">
+                            <span class="text-white font-bold text-xs block">StoneAge® Rotary Nozzles</span>
+                            <span class="text-[10px] text-slate-400 font-mono">Sapphire Orifices • Zero Metal Wall Erosion</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="bg-slatebg-card p-5 rounded-2xl border border-white/10 hover:border-emerald-400/50 hover:shadow-[0_0_25px_rgba(52,211,153,0.2)] transition-all duration-300 space-y-3 group">
-                    <div class="h-10 w-10 rounded-xl bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
-                        <i class="fas fa-shield-virus"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm font-heading group-hover:text-emerald-400 transition-colors">4-Tier Ballistic Defense</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed font-light">
-                        Jetting operators wear certified TST Sweden Dyneema ballistic body armor rated to 2000 BAR. Safety foot valves feature mechanical dump shrouds, and mechanical anti-withdrawal safety catches prevent lance recoil.
-                    </p>
-                    <div class="text-[10px] font-mono text-emerald-400/80 pt-1 border-t border-white/5">
-                        • Dedicated Line-of-Sight Safety Marshal<br>• Sub-0.2s bypass depressurization
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-slatebg-card p-5 rounded-2xl border border-white/10 hover:border-purple-400/50 hover:shadow-[0_0_25px_rgba(192,132,252,0.2)] transition-all duration-300 space-y-3 group">
-                    <div class="h-10 w-10 rounded-xl bg-purple-400/10 border border-purple-400/30 text-purple-400 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <h4 class="text-white font-bold text-sm font-heading group-hover:text-purple-400 transition-colors">Fluid End Metallurgy</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed font-light">
-                        Pumps feature solid ceramic plungers (99.5% Al₂O₃) with zero thermal expansion, housed in forged 17-4PH stainless steel fluid heads. 2-stage 50μ water filtration ensures zero abrasive scoring and prevents downtime.
-                    </p>
-                    <div class="text-[10px] font-mono text-purple-400/80 pt-1 border-t border-white/5">
-                        • Low-suction auto shutoff<br>• Tri-zone E-Stop shutdown relays
+                <!-- Tier 3: 1 Apex Operational Governance Standard -->
+                <div class="flex justify-center w-full">
+                    <div class="pyramid-chip border-emerald-400/50 hover:border-emerald-400 bg-emerald-500/5">
+                        <i class="fas fa-eye text-emerald-400 text-base"></i>
+                        <div class="text-left">
+                            <span class="text-white font-bold text-xs block">Two-Man Safety Rule &amp; NDT Hydro Proofing</span>
+                            <span class="text-[10px] text-slate-400 font-mono">Dedicated Line-of-Sight Deadman Marshal • Level II ASNT Documented</span>
+                        </div>
                     </div>
                 </div>
             </div>
