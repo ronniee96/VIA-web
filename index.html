@@ -201,6 +201,69 @@
             100% { transform: translateX(-50%); }
         }
 
+        /* High-Tech Breathing Glow Animations */
+        @keyframes breatheGlowCyan {
+            0%, 100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 2px rgba(0, 240, 255, 0.4));
+                opacity: 0.85;
+            }
+            50% {
+                transform: scale(1.18);
+                filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.95)) drop-shadow(0 0 20px rgba(0, 240, 255, 0.6));
+                opacity: 1;
+            }
+        }
+        @keyframes breatheBadge {
+            0%, 100% {
+                box-shadow: 0 0 4px rgba(0, 240, 255, 0.15), inset 0 0 4px rgba(0, 240, 255, 0.05);
+                border-color: rgba(0, 240, 255, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 16px rgba(0, 240, 255, 0.55), inset 0 0 8px rgba(0, 240, 255, 0.2);
+                border-color: rgba(0, 240, 255, 0.7);
+                transform: scale(1.03);
+            }
+        }
+        @keyframes breatheBadgeGreen {
+            0%, 100% {
+                box-shadow: 0 0 4px rgba(52, 211, 153, 0.2), inset 0 0 4px rgba(52, 211, 153, 0.05);
+                border-color: rgba(52, 211, 153, 0.35);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 18px rgba(52, 211, 153, 0.65), inset 0 0 10px rgba(52, 211, 153, 0.25);
+                border-color: rgba(52, 211, 153, 0.85);
+                transform: scale(1.03);
+            }
+        }
+        @keyframes breatheDot {
+            0%, 100% {
+                transform: scale(0.85);
+                opacity: 0.7;
+                box-shadow: 0 0 3px currentColor;
+            }
+            50% {
+                transform: scale(1.3);
+                opacity: 1;
+                box-shadow: 0 0 10px currentColor, 0 0 18px currentColor;
+            }
+        }
+        .animate-breathe-cyan {
+            animation: breatheGlowCyan 2.4s ease-in-out infinite;
+            display: inline-block;
+        }
+        .animate-breathe-badge {
+            animation: breatheBadge 2.4s ease-in-out infinite;
+        }
+        .animate-breathe-badge-green {
+            animation: breatheBadgeGreen 2.4s ease-in-out infinite;
+        }
+        .animate-breathe-dot {
+            animation: breatheDot 2.4s ease-in-out infinite;
+        }
+
         /* Interactive Canvas */
         #cleanCanvas {
             width: 100%;
@@ -450,12 +513,12 @@
                             <div>
                                 <span class="text-xs font-heading text-cyanjet font-bold tracking-wider uppercase block">1100 BAR HYDRO-JET SIMULATOR</span>
                                 <h3 class="font-heading font-black text-white text-lg md:text-xl flex items-center gap-2.5">
-                                    <i class="fas fa-crosshairs text-cyanjet"></i> Tube Scale Cleanser
+                                    <i class="fas fa-crosshairs text-cyanjet animate-breathe-cyan"></i> Tube Scale Cleanser
                                 </h3>
                             </div>
                             <div class="text-right">
-                                <span id="pressureBadge" class="inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-white/10 text-slate-300 border border-white/20 px-3 py-1 rounded-full transition-all duration-300">
-                                    <span id="pressureDot" class="h-2 w-2 rounded-full bg-cyanjet"></span> <span id="pressureBadgeText">16,000 PSI READY</span>
+                                <span id="pressureBadge" class="inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-cyanjet/10 text-cyanjet border border-cyanjet/30 px-3 py-1 rounded-full transition-all duration-300 animate-breathe-badge">
+                                    <span id="pressureDot" class="h-2 w-2 rounded-full bg-cyanjet animate-breathe-dot"></span> <span id="pressureBadgeText">16,000 PSI READY</span>
                                 </span>
                             </div>
                         </div>
@@ -1593,17 +1656,17 @@
             if (badgeTextEl && badgeEl) {
                 if (isCompleted || currentPct >= 98) {
                     badgeTextEl.innerText = 'PURGE RESTORED';
-                    badgeEl.className = 'inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-3 py-1 rounded-full transition-colors duration-300';
-                    if (dotEl) dotEl.className = 'h-2 w-2 rounded-full bg-emerald-400';
+                    badgeEl.className = 'inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-3 py-1 rounded-full transition-all duration-300 animate-breathe-badge-green';
+                    if (dotEl) dotEl.className = 'h-2 w-2 rounded-full bg-emerald-400 animate-breathe-dot';
                 } else if (dispBar > 60) {
                     const psi = Math.round(dispBar * 14.5038);
                     badgeTextEl.innerText = `${psi.toLocaleString()} PSI ACTIVE`;
-                    badgeEl.className = 'inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-cyanjet/20 text-cyanjet border border-cyanjet/40 px-3 py-1 rounded-full transition-colors duration-300';
-                    if (dotEl) dotEl.className = 'h-2 w-2 rounded-full bg-cyanjet animate-ping';
+                    badgeEl.className = 'inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-cyanjet/20 text-cyanjet border border-cyanjet/40 px-3 py-1 rounded-full transition-all duration-300 animate-breathe-badge';
+                    if (dotEl) dotEl.className = 'h-2 w-2 rounded-full bg-cyanjet animate-breathe-dot';
                 } else {
                     badgeTextEl.innerText = '16,000 PSI READY';
-                    badgeEl.className = 'inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-white/10 text-slate-300 border border-white/20 px-3 py-1 rounded-full transition-colors duration-300';
-                    if (dotEl) dotEl.className = 'h-2 w-2 rounded-full bg-cyanjet';
+                    badgeEl.className = 'inline-flex items-center gap-1.5 text-xs font-heading font-bold bg-cyanjet/10 text-cyanjet border border-cyanjet/30 px-3 py-1 rounded-full transition-all duration-300 animate-breathe-badge';
+                    if (dotEl) dotEl.className = 'h-2 w-2 rounded-full bg-cyanjet animate-breathe-dot';
                 }
             }
 
