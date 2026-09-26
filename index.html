@@ -347,6 +347,53 @@
             transform: rotateY(180deg);
             text-align: left;
         }
+        .flip-card-footer {
+            min-width: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding-top: 0.875rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .flip-card-footer .footer-left {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            min-width: 0;
+            font-size: 11px;
+            font-weight: 600;
+            font-family: monospace;
+        }
+        .flip-card-footer .footer-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 0.375rem;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            color: #f59e0b;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: monospace;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: all 0.25s ease;
+        }
+        .flip-card:hover .flip-card-footer .footer-btn {
+            background: #f59e0b;
+            color: #070b14;
+            border-color: #f59e0b;
+        }
+        .flip-card-footer .footer-btn i {
+            font-size: 9px;
+            transition: transform 0.2s ease;
+        }
+        .flip-card:hover .flip-card-footer .footer-btn i {
+            transform: translateX(2px);
+        }
 
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
@@ -762,9 +809,9 @@
                                     High-impact supersonic water jetting up to 1100 BAR (16,000 PSI) for surface condensers, boiler water walls, economizers, and air preheaters.
                                 </p>
                             </div>
-                            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2.5 text-[11px] font-mono">
-                                <span class="text-cyanjet truncate font-semibold">15 HP to 120 HP Fleet</span>
-                                <span class="text-amberbrand flex-shrink-0 whitespace-nowrap font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Flip for Specs &rarr;</span>
+                            <div class="flip-card-footer">
+                                <span class="footer-left text-cyanjet">15–120 HP Fleet</span>
+                                <span class="footer-btn">Flip Specs <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                         <div class="flip-card-back">
@@ -797,9 +844,9 @@
                                     Specialized acid circulation for calcium carbonate, magnetite, and silica removal. Pre-commissioning degreasing and post-cleaning passivation.
                                 </p>
                             </div>
-                            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2.5 text-[11px] font-mono">
-                                <span class="text-amberbrand truncate font-semibold">Inhibited Formulations</span>
-                                <span class="text-amberbrand flex-shrink-0 whitespace-nowrap font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Flip for Specs &rarr;</span>
+                            <div class="flip-card-footer">
+                                <span class="footer-left text-amberbrand">Inhibited Acids</span>
+                                <span class="footer-btn">Flip Specs <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                         <div class="flip-card-back">
@@ -832,9 +879,9 @@
                                     Restoring turbine vacuum and boiler heat transfer rates. Complete tube clearing for power plant condensers up to 600 MW capacity.
                                 </p>
                             </div>
-                            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2.5 text-[11px] font-mono">
-                                <span class="text-purple-400 truncate font-semibold">10,000+ Tubes Scope</span>
-                                <span class="text-amberbrand flex-shrink-0 whitespace-nowrap font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Flip for Specs &rarr;</span>
+                            <div class="flip-card-footer">
+                                <span class="footer-left text-purple-400">10k+ Tubes Scope</span>
+                                <span class="footer-btn">Flip Specs <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                         <div class="flip-card-back">
@@ -867,9 +914,9 @@
                                     Pre and post-cleaning non-destructive diagnostics: Eddy Current Testing (ECT), Helium mass spectrometry leak detection, and wall thinning mapping.
                                 </p>
                             </div>
-                            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2.5 text-[11px] font-mono">
-                                <span class="text-emerald-400 truncate font-semibold">ASNT Level II / III</span>
-                                <span class="text-amberbrand flex-shrink-0 whitespace-nowrap font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Flip for Specs &rarr;</span>
+                            <div class="flip-card-footer">
+                                <span class="footer-left text-emerald-400">ASNT Level II/III</span>
+                                <span class="footer-btn">Flip Specs <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                         <div class="flip-card-back">
@@ -902,9 +949,9 @@
                                     Complete extraction and replacement of damaged condenser, cooler, and heat exchanger tubes. Tube sheet reaming, grooving, and torque-controlled expansion.
                                 </p>
                             </div>
-                            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2.5 text-[11px] font-mono">
-                                <span class="text-rose-400 truncate font-semibold">SS304, Cu-Ni, Brass &amp; Ti</span>
-                                <span class="text-amberbrand flex-shrink-0 whitespace-nowrap font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Flip for Specs &rarr;</span>
+                            <div class="flip-card-footer">
+                                <span class="footer-left text-rose-400">SS304, Cu-Ni &amp; Ti</span>
+                                <span class="footer-btn">Flip Specs <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                         <div class="flip-card-back">
@@ -937,9 +984,9 @@
                                     External fin-fan cleaning without bending delicate aluminum fins. Long-distance industrial pipeline descaling, ash slurry line cleaning, and oil piping.
                                 </p>
                             </div>
-                            <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2.5 text-[11px] font-mono">
-                                <span class="text-sky-400 truncate font-semibold">Refinery &amp; Petrochem</span>
-                                <span class="text-amberbrand flex-shrink-0 whitespace-nowrap font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Flip for Specs &rarr;</span>
+                            <div class="flip-card-footer">
+                                <span class="footer-left text-sky-400">Refinery &amp; Pipelines</span>
+                                <span class="footer-btn">Flip Specs <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                         <div class="flip-card-back">
