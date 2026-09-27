@@ -585,14 +585,14 @@
     </header>
 
     <!-- Main Navigation Bar -->
-    <nav id="navbar" class="sticky top-0 w-full z-40 bg-slatebg-deep/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 py-2.5 sm:py-3 px-3 sm:px-4 md:px-10 flex justify-between items-center">
+    <nav id="navbar" class="sticky top-0 w-full z-40 bg-slatebg-deep/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 py-2.5 sm:py-3 px-3 sm:px-6 lg:px-8 xl:px-12 flex justify-between items-center gap-4">
         <!-- Single Official VIA Emblem Logo (High Contrast Container, Never Camouflaged) -->
-        <a href="#top" class="flex items-center gap-2 sm:gap-3 group cursor-pointer" aria-label="Vidarbha Industrial Associates Home">
-            <div class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white p-1 shadow-lg shadow-black/50 border-2 border-amberbrand/70 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+        <a href="#top" class="flex items-center gap-2.5 sm:gap-3 group cursor-pointer flex-shrink-0" aria-label="Vidarbha Industrial Associates Home">
+            <div class="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-white p-1 shadow-lg shadow-black/50 border-2 border-amberbrand/70 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                 <img src="assets/via_logo_badge.png" alt="Official VIA Emblem" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='Logo.png';">
             </div>
             <div class="flex flex-col">
-                <div class="font-heading font-black text-xs min-[400px]:text-sm sm:text-base md:text-lg lg:text-xl tracking-tight text-white whitespace-nowrap leading-none flex items-center gap-1 sm:gap-1.5">
+                <div class="font-heading font-black text-xs min-[400px]:text-sm sm:text-[15px] lg:text-[15px] xl:text-lg tracking-tight text-white whitespace-nowrap leading-none flex items-center gap-1 sm:gap-1.5">
                     <span>VIDARBHA</span>
                     <span class="text-amberbrand">INDUSTRIAL</span>
                     <span class="text-white">ASSOCIATES</span>
@@ -602,16 +602,16 @@
         </a>
 
         <!-- Desktop Navigation Links -->
-        <div class="hidden lg:flex gap-6 xl:gap-8 items-center text-xs font-bold uppercase tracking-wider text-slate-300">
-            <a href="#about" class="hover:text-amberbrand transition">Heritage</a>
-            <a href="#services" class="hover:text-amberbrand transition">Services</a>
-            <a href="#equipment" class="hover:text-amberbrand transition">Fleet (1100 BAR)</a>
-            <a href="#operations" class="hover:text-amberbrand transition">On-Site Operations</a>
-            <a href="#case-study" class="hover:text-amberbrand transition">Case Studies</a>
-            <a href="#compliance" class="hover:text-amberbrand transition">Compliance</a>
-            <a href="#quote" class="bg-gradient-to-r from-amberbrand to-amber-500 hover:from-amber-400 hover:to-amber-600 text-slatebg-deep px-5 py-2.5 rounded-full font-black uppercase tracking-wide text-xs hover:scale-105 transition transform shadow-[0_0_20px_rgba(245,158,11,0.35)] flex items-center gap-2">
+        <div class="hidden lg:flex items-center gap-3.5 xl:gap-6 2xl:gap-8 text-[11px] xl:text-xs font-bold uppercase tracking-wider text-slate-300 flex-shrink-0">
+            <a href="#about" class="hover:text-amberbrand transition whitespace-nowrap">Heritage</a>
+            <a href="#services" class="hover:text-amberbrand transition whitespace-nowrap">Services</a>
+            <a href="#equipment" class="hover:text-amberbrand transition whitespace-nowrap">Fleet<span class="hidden 2xl:inline"> (1100 BAR)</span></a>
+            <a href="#operations" class="hover:text-amberbrand transition whitespace-nowrap"><span class="hidden 2xl:inline">On-Site </span>Operations</a>
+            <a href="#case-study" class="hover:text-amberbrand transition whitespace-nowrap">Case Studies</a>
+            <a href="#compliance" class="hover:text-amberbrand transition whitespace-nowrap">Compliance</a>
+            <a href="#quote" class="bg-gradient-to-r from-amberbrand to-amber-500 hover:from-amber-400 hover:to-amber-600 text-slatebg-deep px-3.5 py-2 xl:px-5 xl:py-2.5 rounded-full font-black uppercase tracking-wide text-[11px] xl:text-xs hover:scale-105 transition transform shadow-[0_0_20px_rgba(245,158,11,0.35)] flex items-center gap-1.5 xl:gap-2 whitespace-nowrap">
                 <span>Request Quote</span>
-                <i class="fab fa-whatsapp text-sm text-slatebg-deep"></i>
+                <i class="fab fa-whatsapp text-xs xl:text-sm text-slatebg-deep"></i>
             </a>
         </div>
 
@@ -1720,48 +1720,27 @@
 
                         <div class="pt-2 space-y-3">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <!-- Option 1: WhatsApp Instant Mobilization -->
+                                <!-- Option 1: WhatsApp Urgent Outage Response -->
                                 <button type="button" onclick="submitQuote(event, 'whatsapp')" id="submitBtn" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white py-3.5 px-4 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2.5 shadow-lg hover:shadow-[0_0_25px_rgba(16,185,129,0.4)] focus:outline-none focus:ring-2 focus:ring-emerald-400 cursor-pointer">
                                     <i class="fab fa-whatsapp text-2xl flex-shrink-0"></i>
                                     <div class="text-left">
-                                        <span class="block leading-tight font-bold">Dispatch to WhatsApp</span>
-                                        <span class="block text-[10px] font-normal opacity-90 font-mono">Urgent Outage Response</span>
+                                        <span class="block leading-tight font-bold">Urgent Inquiry on WhatsApp</span>
+                                        <span class="block text-[10px] font-normal opacity-90 font-mono">Immediate Outage Mobilization</span>
                                     </div>
                                 </button>
 
-                                <!-- Option 2: Formal RFQ via Email -->
+                                <!-- Option 2: Formal Quotation via Email -->
                                 <button type="button" onclick="submitQuote(event, 'email')" id="submitEmailBtn" class="w-full bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white py-3.5 px-4 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2.5 shadow-lg hover:shadow-[0_0_25px_rgba(56,189,248,0.4)] focus:outline-none focus:ring-2 focus:ring-cyanjet cursor-pointer">
-                                    <i class="fas fa-envelope-open-text text-xl flex-shrink-0"></i>
+                                    <i class="fas fa-envelope text-xl flex-shrink-0"></i>
                                     <div class="text-left">
-                                        <span class="block leading-tight font-bold">Formal RFQ via Email</span>
-                                        <span class="block text-[10px] font-normal opacity-90 font-mono">Gmail • Outlook • Yahoo</span>
+                                        <span class="block leading-tight font-bold">Send Inquiry via Email</span>
+                                        <span class="block text-[10px] font-normal opacity-90 font-mono">Formal Quotation &amp; Scope</span>
                                     </div>
                                 </button>
-                            </div>
-
-                            <!-- Direct Multi-Client Webmail Bar -->
-                            <div class="bg-white/5 p-2.5 rounded-xl border border-white/10 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono">
-                                <span class="text-slate-400 text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5">
-                                    <i class="fas fa-paper-plane text-cyanjet"></i> Launch In:
-                                </span>
-                                <div class="flex flex-wrap items-center gap-1.5">
-                                    <button type="button" onclick="submitQuote(event, 'gmail')" class="text-slate-200 hover:text-white px-2 py-1 rounded-md bg-white/5 hover:bg-red-500/20 hover:border-red-400/40 border border-white/10 transition flex items-center gap-1.5 cursor-pointer" title="Compose in Gmail">
-                                        <i class="fab fa-google text-red-400"></i> Gmail
-                                    </button>
-                                    <button type="button" onclick="submitQuote(event, 'outlook')" class="text-slate-200 hover:text-white px-2 py-1 rounded-md bg-white/5 hover:bg-sky-500/20 hover:border-sky-400/40 border border-white/10 transition flex items-center gap-1.5 cursor-pointer" title="Compose in Outlook / Office 365">
-                                        <i class="fab fa-microsoft text-sky-400"></i> Outlook/O365
-                                    </button>
-                                    <button type="button" onclick="submitQuote(event, 'yahoo')" class="text-slate-200 hover:text-white px-2 py-1 rounded-md bg-white/5 hover:bg-purple-500/20 hover:border-purple-400/40 border border-white/10 transition flex items-center gap-1.5 cursor-pointer" title="Compose in Yahoo Mail">
-                                        <i class="fab fa-yahoo text-purple-400"></i> Yahoo
-                                    </button>
-                                    <button type="button" onclick="submitQuote(event, 'mailto')" class="text-slate-200 hover:text-white px-2 py-1 rounded-md bg-white/5 hover:bg-amberbrand/20 hover:border-amberbrand/40 border border-white/10 transition flex items-center gap-1.5 cursor-pointer" title="Open in System Default Email App">
-                                        <i class="fas fa-envelope text-amberbrand"></i> Default Mail
-                                    </button>
-                                </div>
                             </div>
 
                             <p class="text-[11px] text-slate-400 text-center font-mono">
-                                <i class="fas fa-info-circle text-amberbrand"></i> Choose <strong>WhatsApp</strong> for 24/7 urgent mobilization or your preferred <strong>Email client</strong> for an official procurement proposal letter.
+                                <i class="fas fa-shield-alt text-amberbrand"></i> Automatically connects to your device's email client or WhatsApp. Zero marketing spam.
                             </p>
                         </div>
 
@@ -2413,7 +2392,7 @@
                 const details = document.getElementById('q-details').value.trim();
                 const successMsg = document.getElementById('success-msg');
 
-                const isEmailChannel = ['email', 'gmail', 'outlook', 'yahoo', 'mailto', 'default'].includes(channel);
+                const isEmailChannel = channel === 'email';
 
                 if (isEmailChannel) {
                     // Formal RFQ Quotation Letter Template for Executive / Procurement Inquiries
@@ -2422,19 +2401,20 @@
                     const dateStr = now.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
                     const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true });
 
-                    const subject = `[OFFICIAL RFQ] Technical Quotation Request: ${service} - ${name} (${location})`;
-                    const letterBody = 
-`================================================================================
-VIDARBHA INDUSTRIAL ASSOCIATES (VIA)
-HIGH-PRESSURE HYDROJETTING & INDUSTRIAL PLANT TURNAROUND SERVICES
-Corporate Portal : https://via-industrial.com
-Official Emblem  : https://via-industrial.com/Logo.png
-Registered Desk  : vidarbha.industrial.associates@gmail.com | +91 94228 37904
-================================================================================
+                    // Anti-Spam Optimized Subject: Clean, professional, descriptive, no spam triggers or excessive symbols
+                    const subject = `Technical Quotation Request: ${service} - ${name} (${location})`;
 
-FORMAL REQUEST FOR TECHNICAL QUOTATION (RFQ)
-Reference No     : ${refId}
-Date of Request  : ${dateStr} at ${timeStr} (IST)
+                    // Anti-Spam Optimized Body: Legitimate B2B quotation structure, authentic contact info, no fake links or repetitive divider chains
+                    const letterBody = 
+`VIDARBHA INDUSTRIAL ASSOCIATES (VIA)
+High-Pressure Hydrojetting & Industrial Plant Turnaround Services
+Registered Desk : vidarbha.industrial.associates@gmail.com | +91 94228 37904
+Location        : Nagpur, Maharashtra, India (Est. 1997)
+----------------------------------------
+
+TECHNICAL QUOTATION REQUEST (RFQ)
+Reference No    : ${refId}
+Date of Request : ${dateStr} at ${timeStr} (IST)
 
 TO:
 Vidarbha Industrial Associates
@@ -2442,33 +2422,33 @@ Attn: P.C. Mitra (Managing Director) & Technical Mobilization Desk
 Email: vidarbha.industrial.associates@gmail.com
 
 FROM (CLIENT / ENTERPRISE SPECIFICATIONS):
-Enterprise Name  : ${name}
-Authorized Phone : ${phone}
-Plant Location   : ${location}
+Enterprise Name : ${name}
+Authorized Phone: ${phone}
+Plant Location  : ${location}
 
---------------------------------------------------------------------------------
-1. TECHNICAL SCOPE & OPERATING SPECIFICATIONS
---------------------------------------------------------------------------------
-Primary Service  : ${service}
-Pressure Tier    : ${pressure}
-Scope & Details  :
+----------------------------------------
+1. TECHNICAL SCOPE & OPERATING PARAMETERS
+----------------------------------------
+Primary Service : ${service}
+Target Pressure : ${pressure}
+Scope & Details :
 ${details}
 
---------------------------------------------------------------------------------
+----------------------------------------
 2. COMPLIANCE & AUTHORIZATION
---------------------------------------------------------------------------------
-* Data Protection: Confirmed under Digital Personal Data Protection (DPDP) Act 2023
-* Terms & Privacy: Authorized enterprise consent verified
-* Safety Protocols: ISO 9001 / 45001 & ASME Plant Protocols Enforced
+----------------------------------------
+* Authorization : Authorized enterprise technical representative
+* Data Privacy  : Handled under Digital Personal Data Protection (DPDP) Act 2023
+* Plant Safety  : Adheres to ISO 9001 / 45001 & industrial safety guidelines
 
---------------------------------------------------------------------------------
+----------------------------------------
 3. REQUESTED COMMERCIAL DELIVERABLES
---------------------------------------------------------------------------------
+----------------------------------------
 Please review and issue on official VIA corporate letterhead:
-1. Detailed Technical & Commercial Scope Quotation
-2. Mobilization & Turnaround Execution Lead Time
-3. 1100 BAR Hydrojet Rig & Certified Operator Dossier
-4. Site Safety Matrix & Water / Electric Hookup Requirements
+1. Itemized technical & commercial quotation
+2. Mobilization lead time & turnaround execution schedule
+3. 1100 BAR Hydrojet rig specifications & certified operator dossier
+4. Site safety matrix & plant utility hookup requirements
 
 Yours faithfully,
 ${name}
@@ -2480,58 +2460,61 @@ Plant Operations & Procurement Desk
                     const encodedSub = encodeURIComponent(subject);
                     const encodedBody = encodeURIComponent(letterBody);
 
-                    // Client compose deep-links
-                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodedTo}&su=${encodedSub}&body=${encodedBody}`;
-                    const outlookOfficeUrl = `https://outlook.office.com/mail/deeplink/compose?to=${encodedTo}&subject=${encodedSub}&body=${encodedBody}`;
-                    const yahooUrl = `https://compose.mail.yahoo.com/?to=${encodedTo}&subj=${encodedSub}&body=${encodedBody}`;
                     const mailtoUrl = `mailto:${recipient}?subject=${encodedSub}&body=${encodedBody}`;
+                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodedTo}&su=${encodedSub}&body=${encodedBody}`;
 
-                    // Open selected client
-                    if (channel === 'gmail') {
-                        window.open(gmailUrl, '_blank');
-                    } else if (channel === 'outlook') {
-                        window.open(outlookOfficeUrl, '_blank');
-                    } else if (channel === 'yahoo') {
-                        window.open(yahooUrl, '_blank');
-                    } else if (channel === 'mailto') {
-                        window.location.href = mailtoUrl;
-                    } else {
-                        // General Email button: Try opening Gmail compose in new tab, fall back to mailto if blocked
-                        const win = window.open(gmailUrl, '_blank');
-                        if (!win || win.closed || typeof win.closed === 'undefined') {
-                            window.location.href = mailtoUrl;
-                        }
-                    }
+                    // Auto-connect to device's default mail client (Outlook, Apple Mail, Windows Mail, iOS/Android Mail, etc.)
+                    const mailtoLink = document.createElement('a');
+                    mailtoLink.href = mailtoUrl;
+                    mailtoLink.target = '_self';
+                    document.body.appendChild(mailtoLink);
+                    mailtoLink.click();
+                    document.body.removeChild(mailtoLink);
 
                     if (successMsg) {
                         window._lastRfqLetter = letterBody;
-                        successMsg.className = 'text-sky-300 text-xs sm:text-sm mt-3 p-4 bg-sky-950/80 border border-sky-400/40 rounded-xl space-y-3 font-sans shadow-xl';
+                        window._lastRfqSubject = subject;
+                        successMsg.className = 'text-sky-300 text-xs sm:text-sm mt-3 p-4 bg-sky-950/90 border border-sky-400/40 rounded-xl space-y-3 font-sans shadow-2xl relative';
                         successMsg.innerHTML = `
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-envelope-circle-check text-cyanjet text-2xl flex-shrink-0 mt-0.5"></i>
-                                <div>
-                                    <strong class="block text-white text-sm sm:text-base font-bold">Formal RFQ Quotation Letter Compiled</strong>
-                                    <span class="text-xs text-slate-300 leading-relaxed block mt-0.5">
-                                        Your quotation letter addressed to <strong>vidarbha.industrial.associates@gmail.com</strong> has been structured. Choose your webmail or copy text:
-                                    </span>
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fas fa-envelope-circle-check text-cyanjet text-2xl flex-shrink-0 mt-0.5"></i>
+                                    <div>
+                                        <strong class="block text-white text-sm sm:text-base font-bold">Quotation Inquiry Compiled &amp; Opened in Mail</strong>
+                                        <span class="text-xs text-slate-300 leading-relaxed block mt-0.5">
+                                            Connecting to your system's default email client addressed to <strong>vidarbha.industrial.associates@gmail.com</strong>.
+                                        </span>
+                                    </div>
                                 </div>
+                                <button type="button" onclick="document.getElementById('success-msg').classList.add('hidden')" class="text-slate-400 hover:text-white text-sm p-1 rounded transition cursor-pointer" title="Dismiss">
+                                    <i class="fas fa-times"></i>
+                                </button>
                             </div>
-                            <div class="pt-1 flex flex-wrap gap-2 text-xs font-mono">
-                                <a href="${gmailUrl}" target="_blank" class="bg-red-500/20 hover:bg-red-500/30 text-red-200 border border-red-400/40 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1.5">
-                                    <i class="fab fa-google text-red-400"></i> Open Gmail
-                                </a>
-                                <a href="${outlookOfficeUrl}" target="_blank" class="bg-sky-500/20 hover:bg-sky-500/30 text-sky-200 border border-sky-400/40 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1.5">
-                                    <i class="fab fa-microsoft text-sky-400"></i> Open Outlook
-                                </a>
-                                <a href="${yahooUrl}" target="_blank" class="bg-purple-500/20 hover:bg-purple-500/30 text-purple-200 border border-purple-400/40 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1.5">
-                                    <i class="fab fa-yahoo text-purple-400"></i> Open Yahoo
-                                </a>
-                                <a href="${mailtoUrl}" class="bg-amberbrand/20 hover:bg-amberbrand/30 text-amber-200 border border-amberbrand/40 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1.5">
-                                    <i class="fas fa-envelope text-amberbrand"></i> Default Mail
-                                </a>
-                                <button type="button" onclick="navigator.clipboard.writeText(window._lastRfqLetter); this.innerHTML='<i class=\\\'fas fa-check\\\'></i> Copied!';" class="bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg font-mono transition flex items-center gap-1.5 border border-white/20">
+
+                            <!-- Subject Box -->
+                            <div class="bg-slate-900/90 border border-slate-700/80 rounded-lg p-2.5 text-xs font-mono text-slate-300">
+                                <span class="text-slate-400 uppercase text-[10px] font-bold block mb-1 flex items-center gap-1.5">
+                                    <i class="fas fa-heading text-cyanjet"></i> Email Subject
+                                </span>
+                                <div class="text-white font-semibold select-all">${subject}</div>
+                            </div>
+
+                            <!-- Letter Body Preview Box -->
+                            <div class="bg-slate-900/90 border border-slate-700/80 rounded-lg p-3 text-xs font-mono text-slate-300 max-h-48 overflow-y-auto whitespace-pre-wrap select-all">
+${letterBody}
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono">
+                                <button type="button" onclick="navigator.clipboard.writeText(window._lastRfqLetter); this.innerHTML='<i class=\\'fas fa-check text-emerald-400\\'></i> Copied Letter!';" class="bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 border border-white/20 cursor-pointer">
                                     <i class="far fa-copy"></i> Copy Letter Text
                                 </button>
+                                <a href="${mailtoUrl}" class="bg-sky-500/20 hover:bg-sky-500/30 text-sky-200 border border-sky-400/40 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1.5 cursor-pointer">
+                                    <i class="fas fa-paper-plane"></i> Re-trigger Mail App
+                                </a>
+                                <a href="${gmailUrl}" target="_blank" class="bg-red-500/15 hover:bg-red-500/25 text-red-200 border border-red-500/30 px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 cursor-pointer text-[11px]">
+                                    <i class="fab fa-google"></i> Open in Gmail Web
+                                </a>
                             </div>
                         `;
                         successMsg.classList.remove('hidden');
@@ -2548,7 +2531,7 @@ Plant Operations & Procurement Desk
                         `*Scope & Equipment Details:* ${details}\n` +
                         `*Consent Verified:* Yes (Terms & Privacy Accepted)\n` +
                         `----------------------------------------\n` +
-                        `_Sent via VIA Official Technical Portal (via-industrial.com)_`;
+                        `_VIA Heavy Engineering Industrial Services (Est. 1997)_`;
 
                     const encoded = encodeURIComponent(message);
                     const whatsappUrl = `https://wa.me/919422837904?text=${encoded}`;
@@ -2559,12 +2542,12 @@ Plant Operations & Procurement Desk
                         successMsg.innerHTML = '<i class="fas fa-check-circle text-emerald-400 text-base flex-shrink-0"></i><span>Quotation specifications compiled and dispatched to WhatsApp. We will review and confirm mobilization within 2 hours.</span>';
                         successMsg.classList.remove('hidden');
                     }
-                }
 
-                setTimeout(() => { 
-                    form.reset(); 
-                    if (successMsg) successMsg.classList.add('hidden'); 
-                }, 8000);
+                    setTimeout(() => { 
+                        form.reset(); 
+                        if (successMsg) successMsg.classList.add('hidden'); 
+                    }, 8000);
+                }
             }
         };
 
